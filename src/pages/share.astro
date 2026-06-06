@@ -1,0 +1,9 @@
+---
+// /share?id=<id> — public disclosure page. The id is resolved
+// client-side from the query string.
+import Layout from "../layouts/Layout.astro";
+import Island from "@/components/Island";
+---
+<Layout title="Photo disclosure — RetouchLint" description="Original and edited listing photos, with documented edits and disclosure.">
+  <Island page="share" client:load />
+</Layout>

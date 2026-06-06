@@ -1,0 +1,10 @@
+---
+// /projects/view?id=<id> — the listing wizard. The id is resolved
+// client-side from the query string (packets live in localStorage,
+// so paths are not known at build time).
+import Layout from "../../layouts/Layout.astro";
+import Island from "@/components/Island";
+---
+<Layout title="Listing — RetouchLint" description="Document originals, edits, and disclosures for this listing.">
+  <Island page="project" client:load />
+</Layout>

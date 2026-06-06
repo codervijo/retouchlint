@@ -1,0 +1,52 @@
+---
+// src/layouts/Layout.astro — shared chrome (head meta, fonts, theme,
+// global styles) for all RetouchLint pages.
+import "../styles/styles.css";
+
+const {
+  title = "RetouchLint — Disclosure-ready listing photos",
+  description = "RetouchLint helps agents and photographers document original photos, edited finals, and required disclosures in one clean audit packet.",
+} = Astro.props;
+
+// Set the initial theme class before paint to avoid a flash of the wrong theme.
+const themeScript = `
+  (function() {
+    try {
+      const theme = localStorage.getItem('retouchlint-theme') || 'system';
+      const resolved = theme === 'system'
+        ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+        : theme;
+      document.documentElement.classList.add(resolved);
+    } catch (e) {}
+  })();
+`;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="RetouchLint" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@RetouchLint" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+    />
+
+    <script is:inline set:html={themeScript} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
