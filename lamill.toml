@@ -1,0 +1,56 @@
+# lamill.toml — per-site config consumed by lamill (portfolio/ops) and rankmill (content/audits).
+# [content] = stable identity, authored by hand. [todo] = volatile work state.
+# rankmill output lives in sites/<domain>/rankmill-output/, not here.
+
+schema = "lamill-toml-v1"
+
+[deploy]
+platform = "cf-pages"
+production_branch = "main"
+custom_domains = [
+    "retouchlint.com",
+]
+
+[index]
+indexnow_key = "b9a790cc08166cd4d5fead534b3c93c4"
+indexnow_enabled = true
+
+[stack]
+framework = "astro"
+
+# Tracked todos for retouchlint.com. status: "done" | "open".
+[[todo]]
+status = "open"
+priority = "medium"
+task = "Check SEO: GSC indexation + coverage (revisit ~2026-06-20)"
+
+[[todo]]
+status = "open"
+priority = "medium"
+task = "Verify GA4 is receiving data (check Realtime after first traffic)"
+
+[[todo]]
+status = "open"
+priority = "low"
+task = "Confirm GSC verification + sitemap submitted (re-run deploy if it timed out)"
+
+[content]
+# Declarative content identity for this site.
+# Authored by the human; consumed by rankmill to generate drafts and run audits.
+# Leave fields empty until you have a deliberate answer. Empty is better than wrong.
+site_type = "tool"
+primary_keyword = "real estate photo disclosure"
+secondary_keywords = [
+    "California real estate photo disclosure",
+    "virtual staging disclosure rules",
+    "MLS edited photo compliance",
+    "listing photo disclosure",
+    "photographer attestation",
+    "original image access",
+    "what counts as material alteration",
+]
+icp = "The first ICP is a real estate photographer or small media company serving agents in states with new or confusing photo-disclosure rules. They edit many listing shoots per month, are already being asked “what changed?”, and want a simple way to protect themselves and their agent clients without hiring legal help or building their own archive/attestation process."
+urgency_trigger = "new or confusing state/MLS photo-disclosure rules and immediate agent inquiries about edited photos"
+penalty = "disclosure mistakes and no defensible audit trail, exposing photographers and agents to compliance problems and disputes"
+tone = "practical, workflow-first, trust-building"
+law = ""                  # statute or regulation if applicable, else empty
