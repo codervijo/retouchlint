@@ -107,3 +107,6 @@ https://search.google.com/search-console directly.
   colour correction and exposure, which AB 723 expressly excludes, while
   treating object removal as safe. Fluent generated content can be confidently
   backwards, not just vague.
+- **Deploy confirmed:** 2026-09-18 — all 11 content URLs return 200, live HTML is
+  byte-identical to the local build, `sitemap-0.xml` lists 15 URLs, no `robots`
+  meta on any page. Indexing is now gated only on GSC verification (v1.D).
