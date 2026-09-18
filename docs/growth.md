@@ -64,3 +64,46 @@ https://search.google.com/search-console directly.
 - **Action:** project scaffolded via `portfolio new bootstrap`; first deploy pending. After deploy: verify in GSC as `sc-domain:retouchlint.com` and submit the sitemap.
 - **Result:** TBD — review 2026-07-04
 - **Learning:** TBD
+
+## 2026-09-16 — Publish the disclosure content cluster (built, held at noindex)
+- **Status:** active
+- **Hypothesis:** A 9-page cluster targeting photographers' panic searches
+  (California AB 723, virtual staging, material alteration, MLS compliance,
+  attestation, original-image access) will earn the site's first impressions,
+  because the product itself has no discovery path — nobody searches
+  "RetouchLint."
+- **KPI:** indexed-page count, then impressions on the pillar
+  `/real-estate-photo-disclosure/` and the 7 `/blog/*` articles
+- **Baseline:** 0 clicks / 0 impressions / 0 indexed pages; GSC property not yet
+  verified
+- **Action:** built the content surface (v1.B) — 10 routes, shared article
+  layout, Article/FAQPage/BreadcrumbList schema, 24 resolved internal links.
+  **Held at `noindex` and excluded from the sitemap**: fact-checking against the
+  enrolled text of AB 723 found the drafts had the wrong session, wrong
+  enactment year, wrong effective date, a false claim that the statute is silent
+  on *how* to disclose, and one fabricated statutory quotation. Publishing
+  incorrect legal claims on a compliance site would cost more than the traffic
+  is worth. Three claims corrected in the pillar; the rest is v1.C.
+- **Result:** TBD — no measurement possible until v1.C lifts `noindex` and v1.D
+  verifies GSC. Review 2026-10-14.
+- **Learning:** TBD. Early note: lamill-generated drafts were fluent and
+  structurally sound but wrong on every checkable legal specific. Treat
+  generated content about regulation as unverified by default — the fluency
+  carries no signal about accuracy.
+
+## 2026-09-18 — Content cluster corrected and opened to indexing
+- **Status:** active
+- **KPI:** indexed-page count, then impressions on the pillar and the 7 articles
+- **Baseline:** 0 clicks / 0 impressions / 0 indexed pages; GSC still unverified
+- **Action:** completed the v1.C editorial pass — 13 statutory corrections against
+  the enrolled text of AB 723 and the NAR Code of Ethics, two fabricated
+  statutory quotations removed, three FAQ answers rewritten and one added
+  covering the link-to-originals requirement. Lifted `noindex` on all 10 content
+  pages and restored them to the sitemap (15 URLs). Fixed the homepage canonical
+  to the trailing-slash form so it matches the sitemap and `og:url`.
+- **Result:** TBD — review 2026-10-16, after GSC verification (v1.D).
+- **Learning:** TBD. The correction pass found that the drafts inverted the
+  statute's own test in several places — telling photographers to disclose
+  colour correction and exposure, which AB 723 expressly excludes, while
+  treating object removal as safe. Fluent generated content can be confidently
+  backwards, not just vague.

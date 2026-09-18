@@ -1,0 +1,46 @@
+---
+// src/pages/blog/[...slug].astro — the 7 supporting articles.
+import { getCollection, render } from "astro:content";
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+import { relatedFor, idForSlug, BLOG_INDEX_URL } from "../../lib/links";
+
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const { title, h1, description } = post.data;
+const path = `/blog/${post.id}/`;
+
+// Statutory claims checked against the enrolled text of AB 723 (Bus. & Prof.
+// Code § 10140.8) on 2026-09-18. See docs/prd.md v1.C.
+const noindex = false;
+
+const schema = [{
+  "@type": "Article",
+  headline: h1,
+  description,
+  mainEntityOfPage: `https://retouchlint.com${path}`,
+  author: { "@type": "Organization", name: "RetouchLint" },
+  publisher: { "@id": "https://retouchlint.com/#organization" },
+}];
+---
+<ArticleLayout
+  title={title}
+  h1={h1}
+  description={description}
+  path={path}
+  related={relatedFor(idForSlug(post.id))}
+  breadcrumbs={[
+    { name: "Home", url: "/" },
+    { name: "Articles", url: BLOG_INDEX_URL },
+    { name: h1, url: path },
+  ]}
+  schema={schema}
+  noindex={noindex}
+  noindexReason="unverified statutory claims pending editorial review"
+>
+  <Content />
+</ArticleLayout>

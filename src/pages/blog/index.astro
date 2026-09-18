@@ -1,0 +1,40 @@
+---
+// src/pages/blog/index.astro — article index.
+import { getCollection } from "astro:content";
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+import { PILLAR_URL, BLOG_INDEX_URL } from "../../lib/links";
+
+const posts = (await getCollection("blog")).sort((a, b) =>
+  a.data.h1.localeCompare(b.data.h1),
+);
+
+const title = "Photo Disclosure Articles for Real Estate Photographers";
+const h1 = "Articles";
+const description =
+  "Guides on disclosing edited listing photos — California rules, virtual staging, MLS compliance, attestation, and keeping originals reachable.";
+
+const noindex = false;
+---
+<ArticleLayout
+  title={title}
+  h1={h1}
+  description={description}
+  path={BLOG_INDEX_URL}
+  breadcrumbs={[{ name: "Home", url: "/" }, { name: "Articles", url: BLOG_INDEX_URL }]}
+  noindex={noindex}
+  noindexReason="indexes articles that are themselves noindex pending editorial review"
+>
+  <p>
+    Start with the <a href={PILLAR_URL}>full photo disclosure guide</a>, then go
+    deeper on whichever part of the workflow you are stuck on.
+  </p>
+  <ul>
+    {posts.map((p) => (
+      <li>
+        <a href={`/blog/${p.id}/`}>{p.data.h1}</a>
+        <br />
+        <span class="text-sm text-muted-foreground">{p.data.description}</span>
+      </li>
+    ))}
+  </ul>
+</ArticleLayout>

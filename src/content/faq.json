@@ -1,0 +1,46 @@
+[
+  {
+    "q": "Do I have to disclose edited real estate photos in California?",
+    "a": "Yes, if the image was digitally altered. Under California AB 723, effective January 1, 2026, an altered image used to advertise a property needs a reasonably conspicuous statement saying it was altered, plus a link, URL, or QR code to a publicly accessible copy of the original. \"Altered\" means elements of the property were added, removed, or changed — furniture, fixtures, flooring, paint colour, landscaping, the facade. Colour correction, exposure, white balance, cropping, and straightening are expressly excluded, so routine post-processing does not trigger the requirement."
+  },
+  {
+    "q": "What counts as a material alteration to a real estate photo?",
+    "a": "\"Material alteration\" is the industry phrase, but AB 723 does not use a materiality test. It asks a simpler question: were elements of the property added, removed, or changed? Adding furniture, digitally staging an empty room, removing a power line, or repainting a wall all qualify. Brightening an underlit room, straightening a horizon, and correcting white balance do not. Note that removing clutter is an alteration under this test even though it feels cosmetic — you took something out of the frame that was physically there."
+  },
+  {
+    "q": "What's the difference between photo editing and virtual staging disclosure rules?",
+    "a": "Photo editing means adjusting existing elements—color correction, exposure, perspective fix. Virtual staging means adding elements that weren't there—furniture, décor, landscaping. Virtual staging typically requires explicit disclosure because it materially misrepresents the property. Some MLSs forbid it entirely. Standard editing that improves image quality without misleading usually doesn't. Check your local MLS rules and your agent's preferences; they vary by region."
+  },
+  {
+    "q": "How do I prove I disclosed all edited photos to the agent?",
+    "a": "Build an audit trail. Create a simple disclosure form or checklist noting which photos were edited and how. Email it to the agent alongside the images, or use a shared document they sign off on. Screenshot or archive confirmation. This protects you if disputes arise. When edited photos are clearly flagged upfront, agents know what they're defending and can disclose properly to their brokers and the MLS. You're not legally responsible for downstream disclosure, but you are responsible for being honest with your client."
+  },
+  {
+    "q": "Which photo edits actually require disclosure?",
+    "a": "Under AB 723 the dividing line is whether you changed what was physically in the frame. No disclosure needed: colour correction, exposure, white balance, sharpening, angle, straightening, and cropping. Disclosure needed: virtual staging, adding or removing furniture, removing clutter or vehicles, sky replacement, lawn enhancement, changing paint or flooring, and editing out defects or obstructions. Individual MLS boards can be stricter than the statute, so check your agent's board rules too."
+  },
+  {
+    "q": "What happens if I don't disclose edited photos in California?",
+    "a": "You expose yourself and your agent to compliance risk. If a buyer discovers undisclosed alterations, they may claim misrepresentation. Agents can face MLS violations or broker discipline. Both of you lose defensibility. Beyond legal exposure, you damage trust with agents who rely on you—they'll stop calling. Under California AB 723's framework, disclosure protects everyone. It's not a burden; it's the cost of doing this work professionally."
+  },
+  {
+    "q": "Are before-and-after photos required for disclosure?",
+    "a": "Not always required, but they're the clearest defense. If you've made material changes, showing the before is gold—it proves you disclosed. At minimum, provide a written description of edits. Some agents and MLSs expect before-and-afters for virtual staging; others accept written disclosure. Check your agent's workflow preferences and local MLS rules. When you include original images alongside edited ones, you're giving everyone access to the truth and removing ambiguity."
+  },
+  {
+    "q": "How do I keep track of which photos were edited for each listing?",
+    "a": "Use a simple spreadsheet or form for each shoot: property address, number of images, which ones edited, specific edits applied, date disclosed to agent. Update it as you deliver. This becomes your audit trail and speeds up future questions. Many photographers add metadata tags to files or maintain a shared spreadsheet with agents. The goal is: six months later, you can instantly answer \"what changed in that photo?\" without guessing. Workflow protection is compliance protection."
+  },
+  {
+    "q": "Do all MLSs have the same rules for listing photo disclosure?",
+    "a": "No. Rules vary significantly by region and MLS. Some explicitly prohibit virtual staging; others allow it with disclosure. California AB 723 sets a baseline for the state, but individual MLSs and brokerages layer on their own policies. Your agent knows their rules—ask before every shoot. Many photographers create a quick reference sheet of the top three or four MLSs they serve. Ten minutes learning local rules saves hours of reshoots and rework down the line."
+  },
+  {
+    "q": "Can I disclose edits verbally, or does it need to be documented?",
+    "a": "Document it. Verbal agreements create disputes; written records create trust. Email a disclosure form or checklist to the agent, or have them sign a sheet noting edited photos. This protects both of you if memory fades or disputes arise. Under California AB 723's disclosure framework, you need evidence you acted in good faith. A paper trail—even a simple one—proves you did your job honestly and gives agents defensibility with their brokers and the MLS."
+  },
+  {
+    "q": "Is a disclosure label on the photo enough, or do I need to link the originals?",
+    "a": "For California listings, a label alone is not enough. AB 723 requires both a conspicuous statement on or adjacent to the altered image and a link, URL, or QR code leading to a publicly accessible copy of the original, unaltered image, clearly identified as the original. In practice that means your originals cannot just sit on a hard drive — they need to live at an address the agent, the buyer, and their representatives can actually open."
+  }
+]

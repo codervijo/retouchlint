@@ -1,0 +1,34 @@
+---
+// src/pages/real-estate-photo-disclosure.astro — the pillar / hub page.
+import { Content, frontmatter } from "../content/pillar.md";
+import ArticleLayout from "../layouts/ArticleLayout.astro";
+import { relatedFor } from "../lib/links";
+
+const path = "/real-estate-photo-disclosure/";
+
+// Statutory claims checked against the enrolled text of AB 723 and the NAR
+// Code of Ethics on nar.realtor (2026-09-18). No [VERIFY] markers outstanding.
+const noindex = false;
+
+const schema = [{
+  "@type": "Article",
+  headline: frontmatter.h1,
+  description: frontmatter.description,
+  mainEntityOfPage: `https://retouchlint.com${path}`,
+  author: { "@type": "Organization", name: "RetouchLint" },
+  publisher: { "@id": "https://retouchlint.com/#organization" },
+}];
+---
+<ArticleLayout
+  title={frontmatter.title}
+  h1={frontmatter.h1}
+  description={frontmatter.description}
+  path={path}
+  related={relatedFor("pillar")}
+  breadcrumbs={[{ name: "Home", url: "/" }, { name: "Photo disclosure guide", url: path }]}
+  schema={schema}
+  noindex={noindex}
+  noindexReason="open [VERIFY] markers on NAR attribution"
+>
+  <Content />
+</ArticleLayout>

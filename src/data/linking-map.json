@@ -1,0 +1,222 @@
+[
+  {
+    "from": "pillar",
+    "to": "faq",
+    "anchor_text": "jump straight to common questions"
+  },
+  {
+    "from": "faq",
+    "to": "pillar",
+    "anchor_text": "comprehensive real estate photo disclosure guide"
+  },
+  {
+    "from": "pillar",
+    "to": "blog:california-real-estate-photo-disclosure",
+    "anchor_text": "California's specific photo requirements"
+  },
+  {
+    "from": "pillar",
+    "to": "blog:virtual-staging-disclosure-rules",
+    "anchor_text": "virtual staging and what must be disclosed"
+  },
+  {
+    "from": "pillar",
+    "to": "blog:mls-edited-photo-compliance",
+    "anchor_text": "MLS standards for edited photos"
+  },
+  {
+    "from": "pillar",
+    "to": "blog:listing-photo-disclosure",
+    "anchor_text": "listing photo disclosure requirements"
+  },
+  {
+    "from": "pillar",
+    "to": "blog:photographer-attestation",
+    "anchor_text": "creating attestation forms that protect you"
+  },
+  {
+    "from": "pillar",
+    "to": "blog:original-image-access",
+    "anchor_text": "storing originals where you can access them"
+  },
+  {
+    "from": "pillar",
+    "to": "blog:material-alteration",
+    "anchor_text": "what counts as a material alteration"
+  },
+  {
+    "from": "pillar",
+    "to": "blog:legal-requirements-real-estate-photos",
+    "anchor_text": "the legal landscape behind disclosure rules"
+  },
+  {
+    "from": "pillar",
+    "to": "blog:photo-editing-best-practices",
+    "anchor_text": "editing practices that stay compliant"
+  },
+  {
+    "from": "pillar",
+    "to": "blog:disclosure-documentation-process",
+    "anchor_text": "building a disclosure workflow that scales"
+  },
+  {
+    "from": "pillar",
+    "to": "blog:state-by-state-photo-rules",
+    "anchor_text": "how rules differ across states"
+  },
+  {
+    "from": "blog:california-real-estate-photo-disclosure",
+    "to": "pillar",
+    "anchor_text": "understand the broader framework"
+  },
+  {
+    "from": "blog:california-real-estate-photo-disclosure",
+    "to": "blog:state-by-state-photo-rules",
+    "anchor_text": "compare California to other states"
+  },
+  {
+    "from": "blog:california-real-estate-photo-disclosure",
+    "to": "blog:legal-requirements-real-estate-photos",
+    "anchor_text": "the legal principles driving these rules"
+  },
+  {
+    "from": "blog:virtual-staging-disclosure-rules",
+    "to": "pillar",
+    "anchor_text": "back to the core framework"
+  },
+  {
+    "from": "blog:virtual-staging-disclosure-rules",
+    "to": "blog:material-alteration",
+    "anchor_text": "where virtual staging fits in material alteration rules"
+  },
+  {
+    "from": "blog:virtual-staging-disclosure-rules",
+    "to": "blog:photographer-attestation",
+    "anchor_text": "how to document virtual staging in your attestation"
+  },
+  {
+    "from": "blog:mls-edited-photo-compliance",
+    "to": "pillar",
+    "anchor_text": "full photo disclosure reference"
+  },
+  {
+    "from": "blog:mls-edited-photo-compliance",
+    "to": "blog:listing-photo-disclosure",
+    "anchor_text": "general listing photo rules"
+  },
+  {
+    "from": "blog:mls-edited-photo-compliance",
+    "to": "blog:photo-editing-best-practices",
+    "anchor_text": "techniques for MLS-safe edits"
+  },
+  {
+    "from": "blog:listing-photo-disclosure",
+    "to": "pillar",
+    "anchor_text": "the complete disclosure framework"
+  },
+  {
+    "from": "blog:listing-photo-disclosure",
+    "to": "blog:disclosure-documentation-process",
+    "anchor_text": "how to build your workflow"
+  },
+  {
+    "from": "blog:listing-photo-disclosure",
+    "to": "blog:photographer-attestation",
+    "anchor_text": "the attestation component of your process"
+  },
+  {
+    "from": "blog:photographer-attestation",
+    "to": "pillar",
+    "anchor_text": "photo disclosure overview"
+  },
+  {
+    "from": "blog:photographer-attestation",
+    "to": "blog:disclosure-documentation-process",
+    "anchor_text": "how attestation fits into your full process"
+  },
+  {
+    "from": "blog:photographer-attestation",
+    "to": "blog:original-image-access",
+    "anchor_text": "storing originals for audit purposes"
+  },
+  {
+    "from": "blog:original-image-access",
+    "to": "pillar",
+    "anchor_text": "full photo disclosure guide"
+  },
+  {
+    "from": "blog:original-image-access",
+    "to": "blog:disclosure-documentation-process",
+    "anchor_text": "integrating archival into your workflow"
+  },
+  {
+    "from": "blog:material-alteration",
+    "to": "pillar",
+    "anchor_text": "photo disclosure essentials"
+  },
+  {
+    "from": "blog:material-alteration",
+    "to": "blog:photo-editing-best-practices",
+    "anchor_text": "edits that stay within acceptable bounds"
+  },
+  {
+    "from": "blog:legal-requirements-real-estate-photos",
+    "to": "pillar",
+    "anchor_text": "the core disclosure framework"
+  },
+  {
+    "from": "blog:legal-requirements-real-estate-photos",
+    "to": "blog:state-by-state-photo-rules",
+    "anchor_text": "how legal requirements vary by state"
+  },
+  {
+    "from": "blog:photo-editing-best-practices",
+    "to": "pillar",
+    "anchor_text": "complete disclosure landscape"
+  },
+  {
+    "from": "blog:photo-editing-best-practices",
+    "to": "blog:material-alteration",
+    "anchor_text": "where the line is on edits you must disclose"
+  },
+  {
+    "from": "blog:disclosure-documentation-process",
+    "to": "pillar",
+    "anchor_text": "full disclosure reference"
+  },
+  {
+    "from": "blog:disclosure-documentation-process",
+    "to": "blog:original-image-access",
+    "anchor_text": "archiving originals as part of your process"
+  },
+  {
+    "from": "blog:state-by-state-photo-rules",
+    "to": "pillar",
+    "anchor_text": "foundational photo disclosure principles"
+  },
+  {
+    "from": "blog:state-by-state-photo-rules",
+    "to": "blog:california-real-estate-photo-disclosure",
+    "anchor_text": "dive deeper into California"
+  },
+  {
+    "from": "faq",
+    "to": "blog:photographer-attestation",
+    "anchor_text": "step-by-step attestation guide"
+  },
+  {
+    "from": "faq",
+    "to": "blog:disclosure-documentation-process",
+    "anchor_text": "build your disclosure workflow"
+  },
+  {
+    "from": "faq",
+    "to": "blog:material-alteration",
+    "anchor_text": "which edits require disclosure"
+  },
+  {
+    "from": "faq",
+    "to": "blog:virtual-staging-disclosure-rules",
+    "anchor_text": "virtual staging disclosure rules"
+  }
+]

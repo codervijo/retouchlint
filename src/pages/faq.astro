@@ -1,0 +1,43 @@
+---
+// src/pages/faq.astro — FAQ. Questions render from src/content/faq.json and the
+// FAQPage schema is built from the same array, so the markup can never drift
+// from the visible text.
+import ArticleLayout from "../layouts/ArticleLayout.astro";
+import faq from "../content/faq.json";
+import { relatedFor } from "../lib/links";
+
+const path = "/faq/";
+const title = "Real Estate Photo Disclosure FAQ";
+const h1 = "Frequently asked questions about photo disclosure";
+const description =
+  "Straight answers on disclosing edited listing photos: what counts, what to document, what happens if you skip it, and how MLS rules differ.";
+
+const noindex = false;
+
+const schema = [{
+  "@type": "FAQPage",
+  mainEntity: faq.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+}];
+---
+<ArticleLayout
+  title={title}
+  h1={h1}
+  description={description}
+  path={path}
+  related={relatedFor("faq")}
+  breadcrumbs={[{ name: "Home", url: "/" }, { name: "FAQ", url: path }]}
+  schema={schema}
+  noindex={noindex}
+  noindexReason="answers repeat unverified statutory claims pending editorial review"
+>
+  {faq.map((f) => (
+    <>
+      <h2>{f.q}</h2>
+      <p>{f.a}</p>
+    </>
+  ))}
+</ArticleLayout>

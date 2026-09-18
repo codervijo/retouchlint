@@ -1,0 +1,186 @@
+---
+// src/layouts/ArticleLayout.astro — chrome + SEO head for the v1.B content pages.
+//
+// The header/footer here are deliberately plain Astro, not the React
+// <SiteHeader/> island: a client:load island is absent from the initial HTML
+// response, so its nav links would not be crawlable. Content pages need their
+// links in the raw HTML.
+import "../styles/styles.css";
+import { PILLAR_URL, FAQ_URL, BLOG_INDEX_URL, type Related } from "../lib/links";
+
+interface Props {
+  title: string;
+  h1: string;
+  description: string;
+  path: string;              // absolute, trailing-slash form, e.g. "/blog/foo/"
+  related?: Related[];
+  breadcrumbs?: { name: string; url: string }[];
+  schema?: Record<string, unknown>[];
+  noindex?: boolean;
+  noindexReason?: string;
+}
+
+const {
+  title, h1, description, path,
+  related = [], breadcrumbs = [], schema = [],
+  noindex = false, noindexReason,
+} = Astro.props;
+
+const SITE = "https://retouchlint.com";
+const canonical = `${SITE}${path}`;
+
+const themeScript = `
+  (function() {
+    try {
+      const theme = localStorage.getItem('retouchlint-theme') || 'system';
+      const resolved = theme === 'system'
+        ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+        : theme;
+      document.documentElement.classList.add(resolved);
+    } catch (e) {}
+  })();
+`;
+
+const crumbSchema = breadcrumbs.length
+  ? [{
+      "@type": "BreadcrumbList",
+      itemListElement: breadcrumbs.map((c, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: c.name,
+        item: `${SITE}${c.url}`,
+      })),
+    }]
+  : [];
+
+const graph = [...schema, ...crumbSchema];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="RetouchLint" />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    {noindex && noindexReason && <meta name="x-noindex-reason" content={noindexReason} />}
+
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="retouchlint.com" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@RetouchLint" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
+    />
+
+    {graph.length > 0 && (
+      <script
+        type="application/ld+json"
+        set:html={JSON.stringify({ "@context": "https://schema.org", "@graph": graph })}
+      />
+    )}
+
+    <script is:inline set:html={themeScript} />
+  </head>
+  <body>
+    <header class="border-b border-border bg-background/80 backdrop-blur sticky top-0 z-30">
+      <div class="container-page flex items-center justify-between h-16">
+        <a href="/" class="flex items-center gap-2">
+          <span class="inline-flex h-7 w-7 items-center justify-center rounded-md bg-primary text-primary-foreground">
+            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M3 15l5-5 4 4 3-3 6 6" />
+              <circle cx="9" cy="9" r="1.4" fill="currentColor" />
+            </svg>
+          </span>
+          <span class="font-semibold tracking-tight text-foreground">RetouchLint</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
+          <a href={PILLAR_URL} class="hover:text-foreground">Disclosure guide</a>
+          <a href={BLOG_INDEX_URL} class="hover:text-foreground">Articles</a>
+          <a href={FAQ_URL} class="hover:text-foreground">FAQ</a>
+        </nav>
+        <a href="/projects/new" class="inline-flex items-center rounded-md bg-primary px-3.5 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90">
+          Create a packet
+        </a>
+      </div>
+    </header>
+
+    <main class="container-page py-12">
+      {breadcrumbs.length > 0 && (
+        <nav aria-label="Breadcrumb" class="mb-6 text-sm text-muted-foreground">
+          <ol class="flex flex-wrap items-center gap-2">
+            {breadcrumbs.map((c, i) => (
+              <li class="flex items-center gap-2">
+                {i > 0 && <span aria-hidden="true">/</span>}
+                {i === breadcrumbs.length - 1
+                  ? <span aria-current="page">{c.name}</span>
+                  : <a href={c.url} class="hover:text-foreground underline underline-offset-4">{c.name}</a>}
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )}
+
+      <article class="prose">
+        <h1>{h1}</h1>
+        <slot />
+      </article>
+
+      {related.length > 0 && (
+        <aside class="mt-16 border-t border-border pt-8">
+          <h2 class="text-lg font-semibold text-foreground mb-4">Keep reading</h2>
+          <ul class="grid gap-3 sm:grid-cols-2">
+            {related.map((r) => (
+              <li>
+                <a href={r.url} class="text-primary underline underline-offset-4 hover:no-underline">
+                  {r.anchor}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </aside>
+      )}
+
+      <aside class="mt-12 rounded-lg border border-border bg-secondary/40 p-6">
+        <h2 class="text-base font-semibold text-foreground">Document one listing</h2>
+        <p class="mt-2 text-sm text-muted-foreground max-w-2xl">
+          RetouchLint pairs each original with its edited final, records what changed,
+          captures your attestation, and writes the disclosure text you hand the agent.
+        </p>
+        <a href="/projects/new" class="mt-4 inline-flex items-center rounded-md bg-primary px-3.5 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90">
+          Create a packet
+        </a>
+      </aside>
+    </main>
+
+    <footer class="border-t border-border mt-12">
+      <div class="container-page py-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-4 text-sm text-muted-foreground">
+        <nav class="flex flex-wrap gap-5">
+          <a href="/" class="hover:text-foreground">Home</a>
+          <a href={PILLAR_URL} class="hover:text-foreground">Disclosure guide</a>
+          <a href={BLOG_INDEX_URL} class="hover:text-foreground">Articles</a>
+          <a href={FAQ_URL} class="hover:text-foreground">FAQ</a>
+          <a href="/dashboard" class="hover:text-foreground">Dashboard</a>
+        </nav>
+        <p class="text-xs max-w-md">
+          RetouchLint supports disclosure workflows. It does not detect AI-generated
+          content and does not provide legal advice.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
