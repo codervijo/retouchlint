@@ -51,3 +51,10 @@ to surface "last AI prompt" per project. Keep entries append-only.
 > § 10140.8(a)(1) shape with a per-packet originals URL; in-app and landing claims
 > matched to what the client-side MVP does. Pricing tier lists left for operator
 > (billing out of scope). "commit and push".
+
+## 2026-09-30 — end of session
+
+> "let us call it a day" / "save any incomplete work into PRD and other docs" — pending
+> list recorded in `docs/prd.md` § 6 (2026-09-30 end-of-session entry); `AI_AGENTS.md`
+> post-deploy checklist updated; lamill sitemap-fallback bug logged as BUG-092 in
+> `sites/portfolio/docs/bugs.md`. Docs edits left uncommitted pending operator.

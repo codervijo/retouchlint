@@ -152,6 +152,28 @@ HTML points into it. v1.E adds a server-rendered law section to the homepage tha
   archive, "Brokerage branding", and a "Centralized broker dashboard" — none exist.
   Left alone because pricing/billing was declared out of scope; operator to decide.
 
+- **2026-09-30 — End-of-session pending list (open until each is closed).**
+  1. *Operator validation of v1.F in real use* — suite green (34 tests) but the
+     packet flow was not clicked through in a browser: set the originals URL on a
+     packet, confirm it lands in the disclosure text, download the .txt, check the
+     share page / dashboard badges ("Exempt edits only").
+  2. *Pricing tier overclaims* — see the RESOLVED (v1.F) entry above; operator call.
+  3. *Durable original-photo hosting* — the 2026-09-16 entries; the real product gap.
+  4. *Growth reviews* — 2026-10-16 (v1.C content indexing) and 2026-10-28 (v1.E
+     homepage + generator) in `docs/growth.md`.
+  5. *Doc hygiene* — `AI_AGENTS.md § Versioning` still permits `vN.X.Y`, which
+     contradicts the canonical two-level scheme in `sites/portfolio/AI_AGENTS.md`;
+     `docs/CLAUDE.md § Project` is still the template placeholder; `AI_AGENTS.md`
+     mixes "CF Pages" and "Workers" for the deploy target.
+  6. *Uncommitted local state, deliberately left out of every commit* —
+     `lamill.toml` (mode 600 tooling state), the `.lamill-translation-pending`
+     deletion, and `content-draft/` (stale duplicate of `src/content/`, but
+     `content-draft/blog-calendar.md` is still the input for v1.H). Operator to
+     decide whether to commit, gitignore, or delete.
+  7. *lamill `submit-sitemap` fallback bug* — logged as BUG-092 in
+     `sites/portfolio/docs/bugs.md`; until fixed, pass `--url
+     https://retouchlint.com/sitemap-index.xml`.
+
 ## 7. SEO Roadmap
 
 Future work, queued after v1.E. **Not scheduled into phases yet — do not build
