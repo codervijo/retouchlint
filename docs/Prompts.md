@@ -44,3 +44,10 @@ to surface "last AI prompt" per project. Keep entries append-only.
 > commit per item; future items appended to PRD § 7 SEO Roadmap. Also: "don't make me
 > submit sitemap manually: use lamill". Built and committed (not pushed); Brokerage
 > contact = hello@lamill.io (operator choice — retouchlint.com has no MX).
+
+## 2026-09-30 — v1.F claims accuracy
+
+> "fix the packet disclosure text and features overclaims" — packet text rewritten to
+> § 10140.8(a)(1) shape with a per-packet originals URL; in-app and landing claims
+> matched to what the client-side MVP does. Pricing tier lists left for operator
+> (billing out of scope). "commit and push".

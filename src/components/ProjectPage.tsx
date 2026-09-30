@@ -423,9 +423,8 @@ function PacketStep({ project }: { project: Project }) {
   }
   function publish() {
     store.update(project.id, { published: true });
-    alert("Public packet link is live.");
   }
-  function downloadPdf() {
+  function downloadText() {
     const blob = new Blob([text], { type: "text/plain" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -441,8 +440,8 @@ function PacketStep({ project }: { project: Project }) {
         <div className="rounded-xl border border-border bg-card p-6">
           <div className="flex items-center justify-between flex-wrap gap-2">
             <h3 className="font-medium text-foreground">Disclosure recommendation</h3>
-            <Badge tone={rec.level === "required" ? "warning" : rec.level === "recommended" ? "accent" : "success"}>
-              {rec.level === "required" ? "Disclosure required" : rec.level === "recommended" ? "Disclosure recommended" : "No disclosure needed"}
+            <Badge tone={rec.level === "required" ? "warning" : rec.level === "exempt" ? "accent" : "success"}>
+              {rec.level === "required" ? "Disclosure required" : rec.level === "exempt" ? "Exempt edits only" : "No disclosure needed"}
             </Badge>
           </div>
           <p className="text-sm text-muted-foreground mt-2">{rec.summary}</p>
@@ -453,6 +452,17 @@ function PacketStep({ project }: { project: Project }) {
             <h3 className="font-medium text-foreground">Copy-paste disclosure language</h3>
             <button onClick={copy} className="text-sm rounded-md border border-border px-3 py-1.5 hover:bg-secondary">Copy</button>
           </div>
+          <label className="mt-4 block">
+            <span className="text-sm font-medium text-foreground">Link to the original, unaltered photos</span>
+            <span className="block text-xs text-muted-foreground mt-0.5">AB 723 requires a publicly accessible page showing the originals — your website, a property site, or a public gallery. It is inserted into the disclosure below.</span>
+            <input
+              type="url"
+              defaultValue={project.originalsUrl ?? ""}
+              onBlur={(e) => store.update(project.id, { originalsUrl: e.target.value.trim() })}
+              placeholder="https://"
+              className="mt-2 w-full rounded-md border border-border bg-background px-3 py-2 text-sm"
+            />
+          </label>
           <pre className="mt-4 whitespace-pre-wrap font-sans text-sm leading-relaxed bg-secondary/40 border border-border rounded-md p-4 text-foreground">{text}</pre>
         </div>
 
@@ -485,31 +495,31 @@ function PacketStep({ project }: { project: Project }) {
         <div className="rounded-xl border border-border bg-card p-5">
           <h4 className="font-medium text-foreground">Packet</h4>
           <ul className="mt-3 text-sm text-muted-foreground space-y-1.5">
-            <li>· {project.originals.length} originals archived</li>
+            <li>· {project.originals.length} originals stored in this browser</li>
             <li>· {project.edited.length} finals documented</li>
             <li>· {project.pairs.length} paired</li>
             <li>· Attestation: {project.attestation.signed ? <span className="text-success">signed</span> : <span className="text-warning">unsigned</span>}</li>
           </ul>
-          <button onClick={downloadPdf} className="mt-4 w-full inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90">
-            Download PDF packet
+          <button onClick={downloadText} className="mt-4 w-full inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground hover:bg-primary/90">
+            Download disclosure text (.txt)
           </button>
         </div>
 
         <div className="rounded-xl border border-border bg-card p-5">
-          <h4 className="font-medium text-foreground">Public original-photo link</h4>
-          <p className="text-xs text-muted-foreground mt-1">Share with buyers, MLS reviewers, or brokers.</p>
+          <h4 className="font-medium text-foreground">Original-photo page</h4>
+          <p className="text-xs text-muted-foreground mt-1">Shows each original beside its final. Packets are stored in this browser, so this link opens only here — it is not the public AB 723 link.</p>
           <div className="mt-3 flex items-center gap-2">
             <input readOnly value={shareUrl} className="flex-1 rounded-md border border-border bg-secondary/40 px-2 py-1.5 text-xs" />
             <button onClick={() => navigator.clipboard.writeText(shareUrl)} className="text-xs rounded-md border border-border px-2 py-1.5 hover:bg-secondary">Copy</button>
           </div>
           {project.published ? (
             <div className="mt-3 flex items-center justify-between">
-              <Badge tone="success">Live</Badge>
+              <Badge tone="success">Published in this browser</Badge>
               <a href={`/share?id=${project.id}`} className="text-xs text-foreground underline">Open page →</a>
             </div>
           ) : (
             <button onClick={publish} className="mt-3 w-full inline-flex items-center justify-center rounded-md border border-border px-4 py-2 text-sm font-medium hover:bg-secondary">
-              Publish public page
+              Publish page
             </button>
           )}
         </div>

@@ -49,8 +49,8 @@ export default function Dashboard() {
                       <td className="px-5 py-4 text-muted-foreground">{p.agent}</td>
                       <td className="px-5 py-4 text-muted-foreground">{p.pairs.length}</td>
                       <td className="px-5 py-4">
-                        <Badge tone={rec.level === "required" ? "warning" : rec.level === "recommended" ? "accent" : "muted"}>
-                          {rec.level === "required" ? "Required" : rec.level === "recommended" ? "Recommended" : "None"}
+                        <Badge tone={rec.level === "required" ? "warning" : rec.level === "exempt" ? "accent" : "muted"}>
+                          {rec.level === "required" ? "Required" : rec.level === "exempt" ? "Exempt edits only" : "None"}
                         </Badge>
                       </td>
                       <td className="px-5 py-4">

@@ -39,8 +39,8 @@ export default function SharePage({ id }: { id: string }) {
         <div className="mt-8 rounded-xl border border-border bg-card p-6">
           <div className="flex items-center justify-between flex-wrap gap-2">
             <h2 className="font-medium text-foreground">Disclosure</h2>
-            <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full border ${rec.level === "required" ? "bg-warning/15 text-warning border-warning/30" : rec.level === "recommended" ? "bg-accent text-accent-foreground border-accent" : "bg-success/10 text-success border-success/20"}`}>
-              {rec.level === "required" ? "Disclosure required" : rec.level === "recommended" ? "Disclosure recommended" : "No edits declared"}
+            <span className={`text-xs font-medium px-2.5 py-0.5 rounded-full border ${rec.level === "required" ? "bg-warning/15 text-warning border-warning/30" : rec.level === "exempt" ? "bg-accent text-accent-foreground border-accent" : "bg-success/10 text-success border-success/20"}`}>
+              {rec.level === "required" ? "Digitally altered" : rec.level === "exempt" ? "Exempt edits only" : "No edits declared"}
             </span>
           </div>
           <pre className="mt-4 whitespace-pre-wrap font-sans text-sm leading-relaxed text-foreground">{text}</pre>

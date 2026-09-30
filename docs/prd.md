@@ -1,7 +1,7 @@
 ---
 project: retouchlint.com
 prd_version: 2
-project_version: v1.E
+project_version: v1.F
 status: active
 owner: Vijo
 last_updated: 2026-09-30
@@ -73,9 +73,10 @@ Two-level versioning convention (canonical: `sites/portfolio/AI_AGENTS.md`):
 | **v1.B** | SEO content surface | shipped `5111bf3`. 10 routes: pillar `/real-estate-photo-disclosure/`, `/faq/`, `/blog/` + 7 articles; shared `ArticleLayout.astro` with canonical/OG/Article+FAQPage+BreadcrumbList schema; `links.ts` resolves `linking-map.json` (24 of 44 links live, 20 dropped as dead targets) | ✅ |
 | **v1.C** | editorial + legal verification | 13 statutory corrections against the enrolled text of AB 723 and nar.realtor; 2 fabricated quotations removed; 3 FAQ answers rewritten + 1 added; `noindex` and the sitemap filter lifted together | ✅ shipped `5111bf3` |
 | **v1.D** | indexing baseline | GSC property `sc-domain:retouchlint.com` verified via DNS TXT; `sitemap-index.xml` submitted; first GSC numbers recorded in `docs/growth.md` | ✅ 2026-09-30 (12 imp / 0 clicks / pos 6.0, 28d) |
-| **v1.E** | SEO basics + AB 723 positioning | app routes (`/dashboard/`, `/projects/*`, `/share/`) `noindex` + out of sitemap; 1200×630 OG image + `summary_large_image`; homepage retargeted to "AB 723 listing photo disclosure" (names AB 723, § 10140.8, CRMLS Rule 11.5.2, California) with server-rendered law section + FAQPage schema; "Powered by RetouchLint" link on the public original-photo page; mock-UI domain → `.com`, Brokerage CTA → real contact; free no-login `/tools/disclosure-generator/` ending in a packet CTA | built 2026-09-30 (`ba35da9`…`e1ccb85`), not pushed |
-| **v1.F** | conversion path | route content readers into the packet workflow (in-content CTA → `projects/new`); measure content → packet-start rate | planned |
-| **v1.G** | content cadence | execute `content-draft/blog-calendar.md` (12 posts, monthly) against whichever v1.B pages actually earn impressions | planned |
+| **v1.E** | SEO basics + AB 723 positioning | app routes (`/dashboard/`, `/projects/*`, `/share/`) `noindex` + out of sitemap; 1200×630 OG image + `summary_large_image`; homepage retargeted to "AB 723 listing photo disclosure" (names AB 723, § 10140.8, CRMLS Rule 11.5.2, California) with server-rendered law section + FAQPage schema; "Powered by RetouchLint" link on the public original-photo page; mock-UI domain → `.com`, Brokerage CTA → real contact; free no-login `/tools/disclosure-generator/` ending in a packet CTA | ✅ shipped 2026-09-30 (`ba35da9`…`e1ccb85`, pushed `c040d96`) |
+| **v1.F** | claims accuracy | packet `disclosureText()` rewritten to § 10140.8(a)(1) shape (altered + where originals can be accessed) with a per-packet `originalsUrl`; exempt-only edits cite (b)(2); in-app labels match reality ("Download disclosure text (.txt)", originals "stored in this browser", share page "opens only here"); landing Features / badge bar / workflow copy drop permanent-link, PDF, C2PA, NAR claims. Pricing tier lists untouched (billing out of scope) | ✅ shipped 2026-09-30 |
+| **v1.G** | conversion path | route content readers into the packet workflow (in-content CTA → `projects/new`); measure content → packet-start rate | planned |
+| **v1.H** | content cadence | execute `content-draft/blog-calendar.md` (12 posts, monthly) against whichever v1.B pages actually earn impressions | planned |
 
 **Current state note:** all 15 routes are in `sitemap-index.xml` and no page
 carries a `robots` meta tag. The statutory claims were checked against the
@@ -104,7 +105,7 @@ HTML points into it. v1.E adds a server-rendered law section to the homepage tha
   earlier than traffic would otherwise justify.
 - **2026-09-16 — Content-to-product distance.** The content targets
   photographers researching *rules*; the product asks them to do per-listing
-  data entry. Unknown whether that gap converts, which is what v1.F measures.
+  data entry. Unknown whether that gap converts, which is what v1.G measures.
 - **2026-09-18 — RESOLVED (v1.C).** All corrections below were applied and the
   pages are indexable. Original finding retained because it is the reason to
   distrust the next batch of generated content.
@@ -144,6 +145,12 @@ HTML points into it. v1.E adds a server-rendered law section to the homepage tha
   4. *Post-deploy:* `portfolio settings gsc submit-sitemap --site retouchlint.com
      --force` after each deploy that changes the URL set; v1.E growth review
      2026-10-28.
+
+- **2026-09-30 — RESOLVED (v1.F): pending items 1–2 above.** Packet text and the
+  landing/in-app claims fixed. Still open: the **Pricing tier lists** promise
+  "Public original-photo page", "PDF audit packet", 30-day / 1-year / permanent
+  archive, "Brokerage branding", and a "Centralized broker dashboard" — none exist.
+  Left alone because pricing/billing was declared out of scope; operator to decide.
 
 ## 7. SEO Roadmap
 
