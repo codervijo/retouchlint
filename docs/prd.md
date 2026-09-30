@@ -1,10 +1,10 @@
 ---
 project: retouchlint.com
 prd_version: 2
-project_version: v1.D
+project_version: v1.E
 status: active
 owner: Vijo
-last_updated: 2026-09-18
+last_updated: 2026-09-30
 ---
 
 # retouchlint.com — PRD
@@ -72,9 +72,10 @@ Two-level versioning convention (canonical: `sites/portfolio/AI_AGENTS.md`):
 | **v1.A** | packet MVP (client-side) | Astro static app ported from the TanStack Start source: landing, dashboard, `projects/new`, `projects/view`, `share`; `store.ts` with 10 edit tags (material / non-material), pairing, attestation, `disclosureText()` + `recommendation()`; `localStorage` persistence | ✅ live (HTTP 200, serving the real app) |
 | **v1.B** | SEO content surface | shipped `5111bf3`. 10 routes: pillar `/real-estate-photo-disclosure/`, `/faq/`, `/blog/` + 7 articles; shared `ArticleLayout.astro` with canonical/OG/Article+FAQPage+BreadcrumbList schema; `links.ts` resolves `linking-map.json` (24 of 44 links live, 20 dropped as dead targets) | ✅ |
 | **v1.C** | editorial + legal verification | 13 statutory corrections against the enrolled text of AB 723 and nar.realtor; 2 fabricated quotations removed; 3 FAQ answers rewritten + 1 added; `noindex` and the sitemap filter lifted together | ✅ shipped `5111bf3` |
-| **v1.D** | indexing baseline | GSC property `sc-domain:retouchlint.com` verified via DNS TXT; `sitemap-index.xml` submitted; first GSC numbers recorded in `docs/growth.md` | planned |
-| **v1.E** | conversion path | route content readers into the packet workflow (in-content CTA → `projects/new`); measure content → packet-start rate | planned |
-| **v1.F** | content cadence | execute `content-draft/blog-calendar.md` (12 posts, monthly) against whichever v1.B pages actually earn impressions | planned |
+| **v1.D** | indexing baseline | GSC property `sc-domain:retouchlint.com` verified via DNS TXT; `sitemap-index.xml` submitted; first GSC numbers recorded in `docs/growth.md` | ✅ 2026-09-30 (12 imp / 0 clicks / pos 6.0, 28d) |
+| **v1.E** | SEO basics + AB 723 positioning | app routes (`/dashboard/`, `/projects/*`, `/share/`) `noindex` + out of sitemap; 1200×630 OG image + `summary_large_image`; homepage retargeted to "AB 723 listing photo disclosure" (names AB 723, § 10140.8, CRMLS Rule 11.5.2, California) with server-rendered law section + FAQPage schema; "Powered by RetouchLint" link on the public original-photo page; mock-UI domain → `.com`, Brokerage CTA → real contact; free no-login `/tools/disclosure-generator/` ending in a packet CTA | in progress |
+| **v1.F** | conversion path | route content readers into the packet workflow (in-content CTA → `projects/new`); measure content → packet-start rate | planned |
+| **v1.G** | content cadence | execute `content-draft/blog-calendar.md` (12 posts, monthly) against whichever v1.B pages actually earn impressions | planned |
 
 **Current state note:** all 15 routes are in `sitemap-index.xml` and no page
 carries a `robots` meta tag. The statutory claims were checked against the
@@ -85,7 +86,7 @@ and the sitemap filter in agreement if either is reintroduced.
 **Known gap:** the homepage is a single React island, so its links only exist
 after hydration. The content cluster is reachable via the sitemap and via
 cross-links between content pages, but nothing in the homepage's server-rendered
-HTML points into it. Worth a static link from the landing page before v1.D.
+HTML points into it. v1.E adds a server-rendered law section to the homepage that links into it.
 
 ## 6. Open questions
 
@@ -103,7 +104,7 @@ HTML points into it. Worth a static link from the landing page before v1.D.
   earlier than traffic would otherwise justify.
 - **2026-09-16 — Content-to-product distance.** The content targets
   photographers researching *rules*; the product asks them to do per-listing
-  data entry. Unknown whether that gap converts, which is what v1.D measures.
+  data entry. Unknown whether that gap converts, which is what v1.F measures.
 - **2026-09-18 — RESOLVED (v1.C).** All corrections below were applied and the
   pages are indexable. Original finding retained because it is the reason to
   distrust the next batch of generated content.
@@ -125,3 +126,27 @@ HTML points into it. Worth a static link from the landing page before v1.D.
   question above is therefore not a v2 nicety; it is the compliance artifact the
   law names, and the content pages will be sending readers to a tool that stops
   one step short of it.
+
+## 7. SEO Roadmap
+
+Future work, queued after v1.E. **Not scheduled into phases yet — do not build
+until the operator slots an item.** Any page stating a statute, MLS rule, or
+penalty needs the v1.C-style check against the primary source before it is
+indexable.
+
+- **`/tools/edit-checker/`** — "does this edit need disclosure?" for specific
+  edits (sky, lawn, staging, wires, trash cans, …), answered against the
+  § 10140.8(b) definition and exclusions.
+- **`/tools/qr-generator/`** — QR code for an original-photo page (the
+  statute accepts a link, URL, or QR code). Only useful once share URLs are
+  durable (§ 6, 2026-09-16).
+- **pSEO: one page per MLS** — CRMLS, SDMLS, MLSListings, Bay East, CLAW, …:
+  rule number, requirements, original/altered sequencing rule. Rule numbers
+  collide across MLSs (Bay East also uses 11.5.2), so every page cites its
+  own MLS's rules document.
+- **pSEO: one page per edit type** — "Is [sky replacement / virtual staging /
+  …] allowed under AB 723?"
+- **State pages** tracking similar bills outside California (FL etc.).
+- **Blog** — AB 723 explainer, guide for photographers, DRE enforcement and
+  penalties.
+- **Backlinks** — photographer communities, MLS vendor directories.

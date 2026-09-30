@@ -110,3 +110,15 @@ https://search.google.com/search-console directly.
 - **Deploy confirmed:** 2026-09-18 — all 11 content URLs return 200, live HTML is
   byte-identical to the local build, `sitemap-0.xml` lists 15 URLs, no `robots`
   meta on any page. Indexing is now gated only on GSC verification (v1.D).
+
+## 2026-09-30 — GSC baseline recorded (v1.D closed)
+- **Status:** active
+- **KPI:** 28-day impressions, clicks, average position (`portfolio project seo retouchlint.com`)
+- **Baseline:** 12 impressions / 0 clicks / 0.0% CTR / avg position 6.0 (28d window
+  ending at the 2026-09-30 sync). Sitemap `sitemap-index.xml` submitted, fetched
+  2026-09-27. 10 of 10 inspected URLs `submitted_indexed`; content pages crawled
+  ~2026-09-24, so most of the window predates indexing.
+- **Action:** closed v1.D. No site change.
+- **Result:** TBD — review 2026-10-16 with the 2026-09-18 entry.
+- **Learning:** TBD. `/dashboard/` was indexed — an empty client-rendered app shell.
+  Removed from the index in v1.E.
