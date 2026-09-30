@@ -122,3 +122,20 @@ https://search.google.com/search-console directly.
 - **Result:** TBD — review 2026-10-16 with the 2026-09-18 entry.
 - **Learning:** TBD. `/dashboard/` was indexed — an empty client-rendered app shell.
   Removed from the index in v1.E.
+
+## 2026-09-30 — Retarget homepage to "AB 723 listing photo disclosure" + free generator (v1.E)
+- **Status:** active
+- **Hypothesis:** The homepage targeted no query ("Disclosure-ready listing photos"). Naming
+  AB 723, § 10140.8, CRMLS Rule 11.5.2 and California in the title/H1/body, plus a free
+  no-login disclosure generator, will earn impressions on statute-specific queries that
+  the generic pages don't, and the generator will attract links.
+- **KPI:** impressions + avg position on queries containing "AB 723" / "10140.8" / "CRMLS";
+  impressions on `/` and `/tools/disclosure-generator/`; indexed-page count back to 11+1
+  content URLs with the app routes dropped.
+- **Baseline:** 12 impressions / 0 clicks / pos 6.0 (28d, site-wide); generator page new.
+- **Action:** v1.E — app routes noindexed + out of sitemap; real 404s (was a 200 SPA
+  fallback); `/sitemap.xml` 301 → `/sitemap-index.xml`; OG image + `summary_large_image`;
+  homepage retargeted with a law section + 6-question FAQPage; "Powered by" link on share
+  pages; `/tools/disclosure-generator/`.
+- **Result:** TBD — review 2026-10-28 (28 days after deploy).
+- **Learning:** TBD.
