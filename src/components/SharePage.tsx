@@ -84,9 +84,15 @@ export default function SharePage({ id }: { id: string }) {
           </div>
         </div>
 
-        <p className="text-xs text-muted-foreground mt-8 text-center">
-          This disclosure page was generated with RetouchLint, a photo-provenance and disclosure workflow. RetouchLint does not detect AI-generated content and does not provide legal advice.
-        </p>
+        <div className="mt-8 text-center">
+          <a href="/" className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground hover:bg-secondary">
+            <Logo className="h-5 w-5" />
+            Powered by RetouchLint — AB 723 photo disclosure
+          </a>
+          <p className="text-xs text-muted-foreground mt-3">
+            RetouchLint is a photo-provenance and disclosure workflow. It does not detect AI-generated content and does not provide legal advice.
+          </p>
+        </div>
       </main>
       <SiteFooter />
     </div>
