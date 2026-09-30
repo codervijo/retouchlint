@@ -154,7 +154,8 @@ function LawSection() {
         ))}
       </div>
       <p className="mt-8 text-sm text-muted-foreground">
-        Read more:{" "}
+        <a href="/tools/disclosure-generator/" className="text-primary underline underline-offset-4 font-medium">Free AB 723 disclosure generator</a>
+        {" · "}
         <a href="/real-estate-photo-disclosure/" className="text-primary underline underline-offset-4">real estate photo disclosure guide</a>
         {" · "}
         <a href="/blog/california-real-estate-photo-disclosure/" className="text-primary underline underline-offset-4">California photo disclosure under AB 723</a>

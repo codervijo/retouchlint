@@ -1,0 +1,159 @@
+---
+// /tools/disclosure-generator/ — free, no-login AB 723 disclosure text tool.
+// Explanation, examples and FAQ are plain Astro so they are in the raw HTML;
+// only the interactive generator is a React island (SSR'd, then hydrated).
+// Statutory wording checked against Bus. & Prof. Code § 10140.8 on
+// leginfo.legislature.ca.gov, 2026-09-30. FAQPage schema is built from the
+// same `faq` array the page renders.
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+import DisclosureGenerator from "@/components/DisclosureGenerator";
+import { PILLAR_URL, FAQ_URL } from "../../lib/links";
+
+const path = "/tools/disclosure-generator/";
+const title = "Free AB 723 Disclosure Generator for Listing Photos";
+const h1 = "AB 723 disclosure statement generator for edited listing photos";
+const description =
+  "Pick the edits made to a listing photo and get copy-paste disclosure text that meets California AB 723 (§ 10140.8). Free, no sign-up.";
+
+const faq = [
+  {
+    q: "Is a caption that just says \"virtually staged\" enough?",
+    a: "Not under AB 723. The statement has to say the image was altered and also say the unaltered images can be accessed at a linked website, URL, or QR code — and that link has to exist and be publicly accessible. A label with no link to the original does not meet § 10140.8(a)(1).",
+  },
+  {
+    q: "Where does the disclosure have to go?",
+    a: "On or adjacent to the altered image, and reasonably conspicuous. In practice that means the photo caption or description, not a footnote at the end of the listing remarks. The generator gives you a per-photo version for that, plus a listing-wide version for remarks.",
+  },
+  {
+    q: "Do I need a disclosure if I only corrected exposure and white balance?",
+    a: "No. Section 10140.8(b)(2) excludes images where only lighting, sharpening, white balance, color correction, angle, straightening, cropping, exposure, or similar adjustments were made that don't change how the property is represented. Tick only those boxes and the generator tells you so.",
+  },
+  {
+    q: "What link do I put in the disclosure?",
+    a: "Any publicly accessible page that includes and clearly identifies the original, unaltered image — a page on your website, a property site, or a shared gallery that anyone can open without logging in. A file on your own drive that needs a login does not count.",
+  },
+  {
+    q: "Is this text legal advice?",
+    a: "No. It follows the wording requirements in the statute, but whether a particular listing complies depends on the facts and on your MLS's own rules. If you are unsure, ask your broker.",
+  },
+];
+
+const schema = [
+  {
+    "@type": "WebApplication",
+    name: "AB 723 disclosure generator",
+    url: `https://retouchlint.com${path}`,
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Any",
+    isAccessibleForFree: true,
+  },
+  {
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+
+const related = [
+  { url: PILLAR_URL, anchor: "Real estate photo disclosure: the full guide" },
+  { url: "/blog/california-real-estate-photo-disclosure/", anchor: "California photo disclosure under AB 723" },
+  { url: "/blog/original-image-access/", anchor: "Giving buyers access to the original image" },
+  { url: "/blog/virtual-staging-disclosure-rules/", anchor: "Virtual staging disclosure rules" },
+  { url: FAQ_URL, anchor: "Photo disclosure FAQ" },
+];
+---
+<ArticleLayout
+  title={title}
+  h1={h1}
+  description={description}
+  path={path}
+  related={related}
+  breadcrumbs={[{ name: "Home", url: "/" }, { name: "Disclosure generator", url: path }]}
+  schema={schema}
+>
+  <p>
+    A California AB 723 disclosure has two parts: a statement that the photo has been
+    digitally altered, and language saying the original, unaltered image can be viewed
+    at a linked website, URL, or QR code. It must sit on or next to the photo. Tick the
+    edits below and copy the result.
+  </p>
+
+  <DisclosureGenerator client:load />
+
+  <h2>What the statement has to contain</h2>
+  <p>
+    Business and Professions Code § 10140.8, added by AB 723 and in effect since
+    January 1, 2026, applies when a broker, salesperson, or someone acting on their
+    behalf uses a digitally altered image to advertise a property for sale. The
+    disclosure must:
+  </p>
+  <ul>
+    <li><strong>Say the image has been altered.</strong> A vague "photos enhanced" doesn't do this; name what changed.</li>
+    <li><strong>Be reasonably conspicuous, on or adjacent to the image.</strong> Put it in the caption or photo description, not buried in the remarks.</li>
+    <li><strong>Say where the original can be seen.</strong> The statute requires language indicating the unaltered images can be accessed at the linked website, URL, or QR code.</li>
+    <li><strong>Link to a publicly accessible original.</strong> The linked page must include, and clearly identify, the original, unaltered image.</li>
+  </ul>
+  <p>
+    If you post the listing on a website you control, § 10140.8(a)(2) also requires the
+    unaltered versions in the posting itself, or a link to a public page that has them.
+  </p>
+
+  <h2>Which edits count</h2>
+  <p>
+    An image is "digitally altered" when photo-editing software or AI adds, removes, or
+    changes elements in it. The statute's list includes fixtures, furniture, appliances,
+    flooring, walls, paint color, hardscape, landscape, the facade, floor plans, and things
+    outside or visible from the property such as streetlights, utility poles, views through
+    windows, and neighboring properties. It says "including, but not limited to," so edits
+    not on the list can still qualify.
+  </p>
+  <p>
+    Excluded: lighting, sharpening, white balance, color correction, angle, straightening,
+    cropping, exposure, and other common adjustments that don't change how the property
+    is represented.
+  </p>
+
+  <h2>Worked examples</h2>
+  <h3>Virtually staged living room</h3>
+  <p>
+    Edits: virtual staging, plus exposure correction. The staging makes it an altered
+    image; the exposure fix is exempt and doesn't need to be listed. Caption:
+    <em>"Digitally altered image: virtually staged with furniture or decor. The original,
+    unaltered image can be accessed at [link]."</em> On CRMLS, the empty-room original
+    also goes immediately before or after this photo in the listing (Rule 11.5.2).
+  </p>
+  <h3>Front exterior with a new sky and greener lawn</h3>
+  <p>
+    Edits: sky replaced, lawn enhanced, power lines removed. All three change what is in
+    the frame — landscape and utility poles are named in the statute — so one statement
+    covers them: <em>"Digitally altered image: lawn or landscaping enhanced; sky replaced;
+    and utility poles, wires, streetlights, or vehicles removed. …"</em>
+  </p>
+  <h3>Where it goes wrong: a label with no original</h3>
+  <p>
+    An agent captions a staged bedroom "Virtually staged" and uploads only the staged
+    version. That names the alteration but gives buyers no way to see the original, so
+    it fails both the link requirement in § 10140.8 and the CRMLS sequencing rule. The
+    fix is to publish the original somewhere public, link it in the caption, and add it
+    to the MLS next to the staged photo.
+  </p>
+
+  <h2>Before you paste it in</h2>
+  <ul>
+    <li>Replace <code>[link to original image]</code> with a real URL that opens without a login. A QR code pointing to the same page also satisfies the statute.</li>
+    <li>Use the per-photo caption on every altered photo. The listing-wide remarks version is an addition, not a substitute.</li>
+    <li>Check your MLS. CRMLS and Bay East both require the original next to the altered photo; other boards may differ.</li>
+    <li>Keep your own record of what was changed in each photo and who changed it — if the disclosure is ever questioned, that record is what you'll need. See the <a href={PILLAR_URL}>disclosure guide</a> for what to keep.</li>
+  </ul>
+
+  <h2>Questions</h2>
+  {faq.map((f) => (
+    <>
+      <h3>{f.q}</h3>
+      <p>{f.a}</p>
+    </>
+  ))}
+</ArticleLayout>
