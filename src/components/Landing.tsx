@@ -61,7 +61,7 @@ function HeroPreview() {
           <span className="h-2.5 w-2.5 rounded-full bg-border" />
           <span className="h-2.5 w-2.5 rounded-full bg-border" />
         </div>
-        <span className="text-xs text-muted-foreground">retouchlint.app / packet / 142-elm-st</span>
+        <span className="text-xs text-muted-foreground">retouchlint.com / packet / 142-elm-st</span>
         <span className="text-xs text-success font-medium">● Disclosure required</span>
       </div>
       <div className="grid md:grid-cols-2">
@@ -266,7 +266,7 @@ function Pricing() {
   const tiers = [
     { name: "Per listing", price: "$19", per: "/ packet", desc: "Best for one-off transactions or testing the workflow.", features: ["1 disclosure packet", "Public original-photo page", "PDF audit packet", "30-day archive"], cta: "Create a packet", to: "/projects/new", highlight: false },
     { name: "Solo agent", price: "$49", per: "/ month", desc: "Active agents and independent photographers.", features: ["Unlimited packets", "Brokerage branding", "1-year archive", "Email support"], cta: "Start solo plan", to: "/projects/new", highlight: true },
-    { name: "Brokerage", price: "$199", per: "/ month", desc: "Teams that need shared compliance records.", features: ["Unlimited seats & packets", "Centralized broker dashboard", "Permanent archive", "Priority support"], cta: "Talk to us", to: "/projects/new", highlight: false },
+    { name: "Brokerage", price: "$199", per: "/ month", desc: "Teams that need shared compliance records.", features: ["Unlimited seats & packets", "Centralized broker dashboard", "Permanent archive", "Priority support"], cta: "Talk to us", to: "mailto:hello@lamill.io?subject=RetouchLint%20Brokerage%20plan", highlight: false },
   ];
   return (
     <section id="pricing" className="bg-secondary/40 border-y border-border">
