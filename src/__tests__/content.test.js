@@ -109,3 +109,24 @@ describe('indexing posture', () => {
     }
   });
 });
+
+describe('app routes stay out of the index', () => {
+  const appPages = ['dashboard.astro', 'projects/new.astro', 'projects/view.astro', 'share.astro', '404.astro'];
+
+  it('every app route passes noindex to Layout', () => {
+    for (const f of appPages) {
+      const src = readFileSync(join(root, 'src', 'pages', f), 'utf8');
+      expect(src, f).toMatch(/<Layout noindex /);
+    }
+  });
+
+  it('the sitemap filter excludes the same routes', () => {
+    const config = readFileSync(join(root, 'astro.config.mjs'), 'utf8');
+    for (const r of ['/dashboard/', '/projects/', '/share/']) expect(config).toContain(`'${r}'`);
+  });
+
+  it('unknown URLs get a real 404, not the SPA fallback', () => {
+    const wrangler = readFileSync(join(root, 'wrangler.jsonc'), 'utf8');
+    expect(wrangler).toContain('"not_found_handling": "404-page"');
+  });
+});

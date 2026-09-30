@@ -1,0 +1,2 @@
+# Scoped redirects only — no catch-all (that would reintroduce soft-404s).
+/sitemap.xml /sitemap-index.xml 301

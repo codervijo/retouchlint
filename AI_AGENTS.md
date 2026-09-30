@@ -78,7 +78,7 @@ docker exec -w /usr/src/app <name> make test proj=retouchlint.com
 ## Deployment info
 
 - **Platform:** Cloudflare Workers (Static Assets) — *not* Vercel.
-- **Config:** `wrangler.jsonc` at the repo root — points `assets.directory` at `./dist` and uses `not_found_handling: "single-page-application"` for SPA client-side routing.
+- **Config:** `wrangler.jsonc` at the repo root — points `assets.directory` at `./dist` and uses `not_found_handling: "404-page"` (serves `dist/404.html` with a real 404). Every route is prerendered, so the SPA fallback is not needed — it returned the homepage with a 200 for every unknown URL (soft-404s).
 - **Headers:** `public/_headers` — cache (`/assets/*` immutable, HTML no-cache) + security headers (`X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`). Vite copies `public/` into `dist/` at build, so the file ships with the assets.
 - **Build:** `pnpm build` → `dist/`. Wrangler picks up `dist/` via `wrangler.jsonc`.
 - **Deploy:** `wrangler deploy` (locally) or via Cloudflare's Git integration on push.
@@ -193,7 +193,7 @@ the bootstrap (this scaffold); v1.A is the first real shipped capability.
 - Stack: astro
 - **Package manager: pnpm only.** No `bun.lockb`, no `package-lock.json`, no `yarn.lock` — they cause CF Pages to pick the wrong manager and break the build. The `pnpm-lock.yaml` is the only lockfile that should ever be committed.
 - Build path: this project's `Makefile` → `../Makefile` → `~/work/projects/builder/`
-- Cloudflare deploy constraints: Vite ≥ 6, frozen-lockfile install, no `_redirects` SPA fallback (handled by `wrangler.jsonc`'s `not_found_handling` instead).
+- Cloudflare deploy constraints: Vite ≥ 6, frozen-lockfile install, no catch-all/SPA fallback in `public/_redirects` — scoped 301s only (currently `/sitemap.xml` → `/sitemap-index.xml`).
 - **Versioning**: two-level `vN` / `vN.X` — see Versioning section above and `sites/portfolio/AI_AGENTS.md` for the canonical statement.
 
 ## Out of scope / don't touch

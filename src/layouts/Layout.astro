@@ -6,6 +6,10 @@ import "../styles/styles.css";
 const {
   title = "RetouchLint — Disclosure-ready listing photos",
   description = "RetouchLint helps agents and photographers document original photos, edited finals, and required disclosures in one clean audit packet.",
+  // App routes (dashboard, packet editor, share page) render client-side from
+  // localStorage, so their HTML is an empty shell. Keep them out of the index;
+  // astro.config.mjs drops the same routes from the sitemap.
+  noindex = false,
 } = Astro.props;
 
 // Set the initial theme class before paint to avoid a flash of the wrong theme.
@@ -30,6 +34,7 @@ const themeScript = `
     <meta name="description" content={description} />
     <meta name="author" content="RetouchLint" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    {noindex && <meta name="robots" content="noindex, follow" />}
 
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
