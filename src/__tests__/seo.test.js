@@ -61,3 +61,25 @@ describe('social cards (every head template)', () => {
     expect(png.readUInt32BE(20)).toBe(630);
   });
 });
+
+describe('homepage AB 723 positioning', () => {
+  const landing = readFileSync(join(process.cwd(), 'src', 'components', 'Landing.tsx'), 'utf8');
+
+  it('title and description target AB 723 listing photo disclosure', () => {
+    const title = raw.match(/const title = "([^"]+)"/)[1];
+    const desc = raw.match(/const description = "([^"]+)"/)[1];
+    expect(title).toMatch(/AB 723 Listing Photo Disclosure/);
+    expect(title.length).toBeLessThanOrEqual(60);
+    expect(desc.length).toBeLessThanOrEqual(155);
+  });
+
+  it('names AB 723, § 10140.8, CRMLS 11.5.2 and California on the page', () => {
+    for (const s of ['AB 723', '10140.8', 'CRMLS Rule 11.5.2', 'California']) expect(landing).toContain(s);
+  });
+
+  it('emits FAQPage schema from the same data the page renders', () => {
+    expect(raw).toMatch(/"@type": "FAQPage"/);
+    expect(raw).toContain('HOME_FAQ.map');
+    expect(landing).toContain('HOME_FAQ.map');
+  });
+});

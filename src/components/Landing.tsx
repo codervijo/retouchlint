@@ -1,4 +1,5 @@
 import { SiteFooter, SiteHeader } from "@/components/site-header";
+import { HOME_FAQ } from "@/data/home-faq";
 
 export default function Landing() {
   return (
@@ -7,10 +8,12 @@ export default function Landing() {
       <main className="flex-1">
         <Hero />
         <LogoBar />
+        <LawSection />
         <Problem />
         <Solution />
         <Features />
         <Pricing />
+        <HomeFaq />
         <CTA />
       </main>
       <SiteFooter />
@@ -24,13 +27,13 @@ function Hero() {
       <div className="max-w-3xl">
         <span className="inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3 py-1 text-xs text-muted-foreground">
           <span className="h-1.5 w-1.5 rounded-full bg-success" />
-          Built for the new MLS photo-disclosure rules
+          California AB 723 · Bus. &amp; Prof. Code § 10140.8 · CRMLS Rule 11.5.2
         </span>
         <h1 className="mt-6 font-display text-5xl md:text-6xl leading-[1.05] text-foreground">
-          Disclosure-ready listing photos, <em className="italic text-muted-foreground">before</em> they hit the MLS.
+          AB 723 listing photo disclosure, <em className="italic text-muted-foreground">before</em> the photos hit the MLS.
         </h1>
         <p className="mt-6 text-lg text-muted-foreground max-w-2xl">
-          RetouchLint helps agents and photographers document original photos, edited finals, and required disclosures in one clean audit packet — no AI detection guesswork, just a paper trail you can hand to a broker or buyer.
+          Since January 1, 2026, California's AB 723 requires every digitally altered listing photo to carry a disclosure on or next to it, plus a link or QR code to the original, unaltered image. CRMLS Rule 11.5.2 also puts the original immediately before or after the altered photo in the MLS. RetouchLint records what changed in each photo and writes the disclosure for you.
         </p>
         <div className="mt-8 flex flex-wrap gap-3">
           <a href="/projects/new" className="inline-flex items-center rounded-md bg-primary px-5 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90">
@@ -110,6 +113,76 @@ function LogoBar() {
       <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-3 text-xs uppercase tracking-widest text-muted-foreground">
         {items.map((i) => <span key={i}>{i}</span>)}
       </div>
+    </section>
+  );
+}
+
+function LawSection() {
+  const reqs = [
+    { t: "A disclosure statement", d: "On or adjacent to the altered image, reasonably conspicuous, saying the image has been altered and that the unaltered images can be accessed at the linked website, URL, or QR code." },
+    { t: "A link to the original", d: "A link, URL, or QR code to a publicly accessible page that includes, and clearly identifies, the original, unaltered image." },
+    { t: "Original next to altered (CRMLS)", d: "CRMLS Rule 11.5.2 requires the unaltered photo immediately before or after the altered one in the listing, with the altered photo labeled in its photo description." },
+  ];
+  const delivers = [
+    { t: "Edit record per photo", d: "Pair each original with its final and tag what changed, using the statute's line between altered elements and exempt adjustments like exposure or color correction." },
+    { t: "Disclosure text", d: "Copy-paste disclosure language for the MLS photo description, remarks, and marketing." },
+    { t: "Photographer attestation", d: "The photographer or editor signs a statement of the work performed, so the agent's disclosure rests on a record rather than memory." },
+    { t: "Original-photo page", d: "Each original shown beside its published final with the edit list. Share pages currently live in your browser, so publish the originals where the public can open them and put that URL in the disclosure." },
+  ];
+  return (
+    <section id="ab-723" className="container-page py-20">
+      <p className="text-sm uppercase tracking-widest text-muted-foreground">What the law requires</p>
+      <h2 className="mt-3 font-display text-4xl text-foreground max-w-3xl">AB 723 needs two things on every altered listing photo — and CRMLS adds a third.</h2>
+      <p className="mt-4 text-muted-foreground max-w-3xl">
+        Business and Professions Code § 10140.8 applies to brokers, salespersons, and anyone acting on their behalf — including the photographer who edits the shoot. An image is "digitally altered" when editing software or AI adds, removes, or changes elements such as furniture, appliances, flooring, paint, landscape, the facade, or views through windows. Lighting, white balance, color correction, straightening, cropping, and exposure alone are exempt.
+      </p>
+      <div className="mt-10 grid md:grid-cols-3 gap-5">
+        {reqs.map((r) => (
+          <div key={r.t} className="rounded-lg border border-border bg-card p-6">
+            <div className="font-medium text-foreground">{r.t}</div>
+            <p className="mt-2 text-sm text-muted-foreground">{r.d}</p>
+          </div>
+        ))}
+      </div>
+      <h3 className="mt-14 font-display text-3xl text-foreground">How RetouchLint delivers it</h3>
+      <div className="mt-6 grid md:grid-cols-2 gap-5">
+        {delivers.map((r) => (
+          <div key={r.t} className="rounded-lg border border-border p-6">
+            <div className="font-medium text-foreground">{r.t}</div>
+            <p className="mt-2 text-sm text-muted-foreground">{r.d}</p>
+          </div>
+        ))}
+      </div>
+      <p className="mt-8 text-sm text-muted-foreground">
+        Read more:{" "}
+        <a href="/real-estate-photo-disclosure/" className="text-primary underline underline-offset-4">real estate photo disclosure guide</a>
+        {" · "}
+        <a href="/blog/california-real-estate-photo-disclosure/" className="text-primary underline underline-offset-4">California photo disclosure under AB 723</a>
+        {" · "}
+        <a href="/blog/original-image-access/" className="text-primary underline underline-offset-4">giving buyers access to the original image</a>
+        {" · "}
+        <a href="/blog/mls-edited-photo-compliance/" className="text-primary underline underline-offset-4">MLS edited-photo compliance</a>
+      </p>
+    </section>
+  );
+}
+
+function HomeFaq() {
+  return (
+    <section id="faq" className="container-page py-20">
+      <p className="text-sm uppercase tracking-widest text-muted-foreground">AB 723 FAQ</p>
+      <h2 className="mt-3 font-display text-4xl text-foreground">Questions agents and photographers ask about AB 723</h2>
+      <div className="mt-10 divide-y divide-border border-y border-border">
+        {HOME_FAQ.map((f) => (
+          <div key={f.q} className="py-6">
+            <h3 className="font-medium text-foreground">{f.q}</h3>
+            <p className="mt-2 text-muted-foreground max-w-3xl">{f.a}</p>
+          </div>
+        ))}
+      </div>
+      <p className="mt-6 text-sm text-muted-foreground">
+        More in the <a href="/faq/" className="text-primary underline underline-offset-4">full photo disclosure FAQ</a>. RetouchLint does not provide legal advice.
+      </p>
     </section>
   );
 }

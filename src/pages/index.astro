@@ -4,12 +4,13 @@
 // SEO regression test can assert against this file directly).
 import "../styles/styles.css";
 import Island from "@/components/Island";
+import { HOME_FAQ } from "@/data/home-faq";
 
 // Trailing slash: must match the sitemap <loc> and og:url exactly, or the
 // canonical and the sitemap disagree about which URL is the real one.
 const site = "https://retouchlint.com/";
-const title = "RetouchLint — Disclosure-ready listing photos";
-const description = "RetouchLint helps agents and photographers document original photos, edited finals, and required disclosures in one clean audit packet — no AI detection guesswork, just a paper trail you can hand to a broker or buyer.";
+const title = "California AB 723 Listing Photo Disclosure — RetouchLint";
+const description = "AB 723 (§ 10140.8) requires a disclosure and a link to the original on every altered California listing photo. RetouchLint writes the disclosure.";
 
 const themeScript = `
   (function() {
@@ -61,7 +62,7 @@ const themeScript = `
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap"
     />
 
-    <!-- JSON-LD structured data: Organization + WebSite -->
+    <!-- JSON-LD structured data: Organization + WebSite + FAQPage (from src/data/home-faq.ts, rendered visibly by Landing.tsx) -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@graph": [
@@ -77,6 +78,15 @@ const themeScript = `
           "url": "https://retouchlint.com/",
           "name": "RetouchLint",
           "publisher": { "@id": "https://retouchlint.com/#organization" }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://retouchlint.com/#faq",
+          "mainEntity": HOME_FAQ.map((f) => ({
+            "@type": "Question",
+            "name": f.q,
+            "acceptedAnswer": { "@type": "Answer", "text": f.a }
+          }))
         }
       ]
     })} />
