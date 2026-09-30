@@ -127,6 +127,24 @@ HTML points into it. v1.E adds a server-rendered law section to the homepage tha
   law names, and the content pages will be sending readers to a tool that stops
   one step short of it.
 
+- **2026-09-30 — Pending after v1.E (not scheduled; operator to slot).**
+  1. *Packet disclosure text is not AB 723-shaped.* `disclosureText()` in
+     `src/lib/store.ts` says originals are "available on request"; § 10140.8(a)(1)
+     requires language saying the unaltered image can be accessed at a linked
+     website/URL/QR code. The free generator (`src/lib/disclosure.ts`) already
+     produces compliant wording — the paid packet should reuse it.
+  2. *Landing Features section overclaims.* "Original + final archive … permanent
+     reference link", "Public original-photo links", and "Broker-ready PDF packet"
+     describe capabilities the client-side MVP does not have (share pages resolve
+     only in the creating browser; no PDF export exists). The v1.E law section
+     already states the share-page limitation, so the page now contradicts itself.
+     Also review the LogoBar badges ("NAR-aligned", "C2PA-friendly") for support.
+  3. *Durable original-photo hosting* — see 2026-09-16 entries above; items 1–2
+     are cheap copy fixes, this is the real product gap.
+  4. *Post-deploy:* `portfolio settings gsc submit-sitemap --site retouchlint.com
+     --force` after each deploy that changes the URL set; v1.E growth review
+     2026-10-28.
+
 ## 7. SEO Roadmap
 
 Future work, queued after v1.E. **Not scheduled into phases yet — do not build
