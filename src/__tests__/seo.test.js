@@ -42,3 +42,22 @@ describe('SEO baseline (src/pages/index.astro)', () => {
     expect(html).toMatch(/"@type":\s*"WebSite"/);
   });
 });
+
+describe('social cards (every head template)', () => {
+  const heads = ['src/pages/index.astro', 'src/layouts/Layout.astro', 'src/layouts/ArticleLayout.astro'];
+
+  it('uses summary_large_image with the 1200x630 OG image', () => {
+    for (const f of heads) {
+      const src = readFileSync(join(process.cwd(), f), 'utf8');
+      expect(src, f).toMatch(/name="twitter:card" content="summary_large_image"/);
+      expect(src, f).toMatch(/property="og:image" content="https:\/\/retouchlint\.com\/og-image\.png"/);
+      expect(src, f).toMatch(/name="twitter:image"/);
+    }
+  });
+
+  it('the OG image file is 1200x630', () => {
+    const png = readFileSync(join(process.cwd(), 'public', 'og-image.png'));
+    expect(png.readUInt32BE(16)).toBe(1200);
+    expect(png.readUInt32BE(20)).toBe(630);
+  });
+});
