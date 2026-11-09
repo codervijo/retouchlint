@@ -160,7 +160,8 @@ HTML points into it. v1.E adds a server-rendered law section to the homepage tha
   2. *Pricing tier overclaims* — see the RESOLVED (v1.F) entry above; operator call.
   3. *Durable original-photo hosting* — the 2026-09-16 entries; the real product gap.
   4. *Growth reviews* — 2026-10-16 (v1.C content indexing) and 2026-10-28 (v1.E
-     homepage + generator) in `docs/growth.md`.
+     homepage + generator) in `docs/growth.md`. **Done 2026-11-08** — both
+     extended one window; next review 2026-12-06.
   5. *Doc hygiene* — `AI_AGENTS.md § Versioning` still permits `vN.X.Y`, which
      contradicts the canonical two-level scheme in `sites/portfolio/AI_AGENTS.md`;
      `docs/CLAUDE.md § Project` is still the template placeholder; `AI_AGENTS.md`

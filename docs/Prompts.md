@@ -58,3 +58,9 @@ to surface "last AI prompt" per project. Keep entries append-only.
 > list recorded in `docs/prd.md` § 6 (2026-09-30 end-of-session entry); `AI_AGENTS.md`
 > post-deploy checklist updated; lamill sitemap-fallback bug logged as BUG-092 in
 > `sites/portfolio/docs/bugs.md`. Docs edits left uncommitted pending operator.
+
+## 2026-11-08 — growth reviews (v1.C content, v1.E homepage)
+
+> "do the growth reviews" — pulled GSC query/page data (through 2026-11-06) and filled
+> Result/Learning in `docs/growth.md`. Indexing met (10/10); 55 imp / 0 clicks / pos 29.9
+> (28d); no statute-specific query traction. Both entries extended to 2026-12-06.

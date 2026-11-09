@@ -66,7 +66,7 @@ https://search.google.com/search-console directly.
 - **Learning:** TBD
 
 ## 2026-09-16 — Publish the disclosure content cluster (built, held at noindex)
-- **Status:** active
+- **Status:** testing — superseded by the 2026-09-18 entry (same cluster); reviewed there
 - **Hypothesis:** A 9-page cluster targeting photographers' panic searches
   (California AB 723, virtual staging, material alteration, MLS compliance,
   attestation, original-image access) will earn the site's first impressions,
@@ -84,15 +84,15 @@ https://search.google.com/search-console directly.
   on *how* to disclose, and one fabricated statutory quotation. Publishing
   incorrect legal claims on a compliance site would cost more than the traffic
   is worth. Three claims corrected in the pillar; the rest is v1.C.
-- **Result:** TBD — no measurement possible until v1.C lifts `noindex` and v1.D
-  verifies GSC. Review 2026-10-14.
-- **Learning:** TBD. Early note: lamill-generated drafts were fluent and
+- **Result:** No measurement possible until v1.C lifted `noindex` and v1.D
+  verified GSC. Measured under the 2026-09-18 entry (reviewed 2026-11-08).
+- **Learning:** See the 2026-09-18 review. Early note: lamill-generated drafts were fluent and
   structurally sound but wrong on every checkable legal specific. Treat
   generated content about regulation as unverified by default — the fluency
   carries no signal about accuracy.
 
 ## 2026-09-18 — Content cluster corrected and opened to indexing
-- **Status:** active
+- **Status:** testing — indexing half met; impressions extended one window to 2026-12-06
 - **KPI:** indexed-page count, then impressions on the pillar and the 7 articles
 - **Baseline:** 0 clicks / 0 impressions / 0 indexed pages; GSC still unverified
 - **Action:** completed the v1.C editorial pass — 13 statutory corrections against
@@ -101,8 +101,25 @@ https://search.google.com/search-console directly.
   covering the link-to-originals requirement. Lifted `noindex` on all 10 content
   pages and restored them to the sitemap (15 URLs). Fixed the homepage canonical
   to the trailing-slash form so it matches the sitemap and `og:url`.
-- **Result:** TBD — review 2026-10-16, after GSC verification (v1.D).
-- **Learning:** TBD. The correction pass found that the drafts inverted the
+- **Result:** Reviewed 2026-11-08 (GSC data through 2026-11-06). *Indexing:* met —
+  10/10 inspected URLs `submitted_indexed`; sitemap (12 URLs) fetched OK 2026-11-02.
+  *Impressions:* 28d = 55 imp / 0 clicks / avg pos 29.9 (baseline 12 / 0 / 6.0).
+  Since 2026-09-01: 86 imp, 0 clicks, ~2 imp/day since late October. By page
+  (all-time imp, avg pos): pillar 23 (26.5), `mls-edited-photo-compliance` 23 (31.5),
+  `california-real-estate-photo-disclosure` 15 (33.6), `original-image-access` 5 (8.4),
+  `virtual-staging-disclosure-rules` 5 (21), `/faq/` 3, `listing-photo-disclosure` 2,
+  `what-counts-as-material-alteration` 1, `photographer-attestation` 0. Only 21 of 86
+  impressions carry a query (the rest are anonymized); the visible ones are broad head
+  terms at pos 52–94 ("real estate photo compliance" 8, "mls photo compliance" 4,
+  "real estate photography laws" 4, "virtual staging disclosure" 1, "ab 723" 1) plus
+  one long-tail question at pos 4.3.
+- **Learning:** Indexing isn't the bottleneck; ranking is. Google tests the pages on
+  broad head terms they can't win (pages 3–9), and no specific query has surfaced at
+  a rankable position. ~2 imp/day is too little to judge CTR or titles. Extended one
+  window — review 2026-12-06. If impressions haven't clearly grown and no query has
+  reached the top 20 by then, more articles of the same shape won't fix it; the next
+  bet is long-tail specificity (PRD § 7 per-MLS / per-edit-type pages) or backlinks.
+  Earlier note: the correction pass found that the drafts inverted the
   statute's own test in several places — telling photographers to disclose
   colour correction and exposure, which AB 723 expressly excludes, while
   treating object removal as safe. Fluent generated content can be confidently
@@ -112,19 +129,22 @@ https://search.google.com/search-console directly.
   meta on any page. Indexing is now gated only on GSC verification (v1.D).
 
 ## 2026-09-30 — GSC baseline recorded (v1.D closed)
-- **Status:** active
+- **Status:** shipped (baseline record)
 - **KPI:** 28-day impressions, clicks, average position (`portfolio project seo retouchlint.com`)
 - **Baseline:** 12 impressions / 0 clicks / 0.0% CTR / avg position 6.0 (28d window
   ending at the 2026-09-30 sync). Sitemap `sitemap-index.xml` submitted, fetched
   2026-09-27. 10 of 10 inspected URLs `submitted_indexed`; content pages crawled
   ~2026-09-24, so most of the window predates indexing.
 - **Action:** closed v1.D. No site change.
-- **Result:** TBD — review 2026-10-16 with the 2026-09-18 entry.
-- **Learning:** TBD. `/dashboard/` was indexed — an empty client-rendered app shell.
-  Removed from the index in v1.E.
+- **Result:** Reviewed 2026-11-08: 28d = 55 imp / 0 clicks / pos 29.9 — detail under
+  the 2026-09-18 review. `/dashboard/` had 3 impressions total, none in the last 28d.
+- **Learning:** `/dashboard/` was indexed — an empty client-rendered app shell.
+  Removed from the index in v1.E; the noindex took effect (zero impressions since).
+  The pos 6.0 baseline was an artifact of 12 impressions, so it isn't a useful
+  reference point.
 
 ## 2026-09-30 — Retarget homepage to "AB 723 listing photo disclosure" + free generator (v1.E)
-- **Status:** active
+- **Status:** testing — not supported so far; extended one window to 2026-12-06
 - **Hypothesis:** The homepage targeted no query ("Disclosure-ready listing photos"). Naming
   AB 723, § 10140.8, CRMLS Rule 11.5.2 and California in the title/H1/body, plus a free
   no-login disclosure generator, will earn impressions on statute-specific queries that
@@ -137,5 +157,17 @@ https://search.google.com/search-console directly.
   fallback); `/sitemap.xml` 301 → `/sitemap-index.xml`; OG image + `summary_large_image`;
   homepage retargeted with a law section + 6-question FAQPage; "Powered by" link on share
   pages; `/tools/disclosure-generator/`.
-- **Result:** TBD — review 2026-10-28 (28 days after deploy).
-- **Learning:** TBD.
+- **Result:** Reviewed 2026-11-08 (GSC data through 2026-11-06). *Statute queries:*
+  "ab 723" 1 impression at pos 94, served by `/blog/california-real-estate-photo-disclosure/`
+  (not by the homepage); "10140.8" and "CRMLS" 0. *Homepage:* 1 imp in 28d (pos 2), 4
+  all-time; last crawled 2026-11-03. *Generator:* 1 imp (pos 1); backlinks not
+  measured. *Index set:* met — 12-URL sitemap (11 content + generator), app routes out;
+  `/dashboard/` at 0 impressions in 28d.
+- **Learning:** The structural work (noindex, 404s, sitemap redirect) landed. The
+  retarget hasn't produced impressions for statute-specific queries. Two readings
+  that the data can't yet tell apart: (a) Google hadn't reprocessed the retargeted
+  homepage until ~2026-11-03, or (b) "AB 723" / "10140.8" queries have little search
+  volume (not checked with a keyword tool). Extended to 2026-12-06; check keyword
+  volume before investing further in statute-named targeting. With 0 clicks site-wide,
+  v1.G (conversion) has nothing to measure yet, and no analytics is installed
+  (CHECK_080).
