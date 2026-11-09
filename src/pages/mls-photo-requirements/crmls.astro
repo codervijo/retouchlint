@@ -1,0 +1,176 @@
+---
+// /mls-photo-requirements/crmls/ — CRMLS Rule 11.5.2 (Rules & Policies effective 2026-07-10).
+// Source quotes: docs/mls-sources.md § CRMLS (primary-source check 2026-11-08).
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+
+const path = "/mls-photo-requirements/crmls/";
+const SOURCE = "https://go.crmls.org/crmls-rules-and-policies/";
+const title = "CRMLS Rule 11.5.2: Digitally Altered Listing Photos";
+const h1 = "CRMLS Rule 11.5.2: which photo edits CRMLS allows, labels, and bans";
+const description =
+  "CRMLS lets you virtually stage with a label and the original beside it, but bans edits to landscape, walls or power lines. The July 2026 rule explained.";
+
+const faq = [
+  {
+    q: "Is virtual staging allowed on CRMLS?",
+    a: "Yes. Virtual staging is the edit Rule 11.5.2 is built around: CRMLS defines a Digitally Altered Image as one altered to add, remove, or change elements related to furniture or appliances. Label it, upload the empty-room original, and place the original immediately before or after the staged photo.",
+  },
+  {
+    q: "Can I remove a utility pole or a neighbor's house from a CRMLS photo?",
+    a: "No. CRMLS prohibits adding any photo altered to add, remove, or modify elements outside of or visible from the property, naming streetlights, utility poles, views through windows, and neighboring properties. The rule states no exception for this category.",
+  },
+  {
+    q: "Can I show a remodel that hasn't happened yet?",
+    a: "Only if the listed property will be improved to match the altered photo by close, as part of the listed price. That is the one exception CRMLS gives for altering real-property elements such as flooring, cabinetry, paint color or landscape. Renderings of improvements that won't be in place at closing can go in the listing's Supplements, with a notice that they aren't included in the price.",
+  },
+  {
+    q: "Is sky replacement allowed on CRMLS?",
+    a: "The rule doesn't name it. Skies aren't in either prohibited list, but views through windows are, and Rule 11.5(c) requires media to be a truthful representation of the property in all respects. Ask CRMLS compliance before relying on a replaced sky.",
+  },
+  {
+    q: "Where do I type the label?",
+    a: "In the text field for the altered photo in the add/edit module. Rule 11.5.2 accepts \"Photo Modified\", \"Virtually Staged\", \"Digitally Altered\" or \"AI Altered\", or an accurate, substantially similar term.",
+  },
+];
+
+const schema = [
+  {
+    "@type": "Article",
+    headline: h1,
+    description,
+    mainEntityOfPage: `https://retouchlint.com${path}`,
+    author: { "@type": "Organization", name: "RetouchLint" },
+    publisher: { "@id": "https://retouchlint.com/#organization" },
+  },
+  {
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+
+const related = [
+  { url: "/mls-photo-requirements/", anchor: "All California MLS photo rules compared" },
+  { url: "/mls-photo-requirements/mlslistings/", anchor: "MLSListings: no links on listing photos" },
+  { url: "/mls-photo-requirements/bay-east/", anchor: "Bay East: original goes immediately after" },
+  { url: "/blog/virtual-staging-disclosure-rules/", anchor: "Virtual staging disclosure rules" },
+];
+---
+<ArticleLayout
+  title={title}
+  h1={h1}
+  description={description}
+  path={path}
+  related={related}
+  breadcrumbs={[
+    { name: "Home", url: "/" },
+    { name: "MLS photo requirements", url: "/mls-photo-requirements/" },
+    { name: "CRMLS", url: path },
+  ]}
+  schema={schema}
+>
+  <p>
+    On CRMLS you can virtually stage a listing photo if you label it and put the unaltered
+    original immediately before or after it. You cannot alter landscape, walls, flooring or
+    other parts of the property unless the home will be improved to match by close. You
+    also cannot alter anything outside or visible from the property, such as power lines,
+    streetlights or the view. Those rules took effect with CRMLS's Rules &amp; Policies
+    of July 10, 2026, and they are stricter than AB 723.
+  </p>
+
+  <h2>What Rule 11.5.2 requires</h2>
+  <p>A Subscriber who submits a Digitally Altered Image must also:</p>
+  <ol>
+    <li>submit the original, unaltered version;</li>
+    <li>make sure the original is displayed in the listing immediately before or after the altered image; and</li>
+    <li>label the altered image "Photo Modified", "Virtually Staged", "Digitally Altered" or "AI Altered", or an accurate, substantially similar term, in the photo's text field in the add/edit module.</li>
+  </ol>
+
+  <h2>CRMLS defines "altered" more narrowly than the statute</h2>
+  <p>
+    AB 723 treats almost any added, removed or changed element as an alteration: fixtures,
+    furniture, flooring, landscape, utility poles and more. CRMLS's definition covers only
+    edits "related to furniture or appliances." Both exclude the same routine adjustments:
+    lighting, sharpening, white balance, color correction, angle, straightening, cropping
+    and exposure.
+  </p>
+  <p>
+    That narrower definition isn't a loosening. CRMLS moved everything else out of the
+    "label it" category and into a prohibition.
+  </p>
+
+  <h2>The edits CRMLS prohibits</h2>
+  <p>
+    Citing Rule 11.5.2 together with its truth-in-advertising rules (11.5(c) and 12.10),
+    CRMLS says Subscribers may not add a photo altered to add, remove or modify:
+  </p>
+  <ul>
+    <li>
+      <strong>Real-property elements</strong>: flooring, walls, windows, structural
+      elements, cabinetry, paint color, hardscape, landscape, façade, fixtures or floor
+      plans. Allowed only if the listed property will be improved to match the photo by
+      close, as part of the listed price.
+    </li>
+    <li>
+      <strong>Elements outside of or visible from the property</strong>: streetlights,
+      utility poles, views through windows and neighboring properties. The rule states no
+      exception.
+    </li>
+  </ul>
+  <p>
+    A label does not cure either one. A photo with a removed utility pole is non-compliant
+    on CRMLS however clearly it is marked, and Rule 11.5.3 lets the MLS remove
+    non-compliant media without notice.
+  </p>
+
+  <h2>Worked examples</h2>
+  <h3>Staged bedroom: allowed</h3>
+  <p>
+    Furniture added to an empty bedroom is the textbook Digitally Altered Image. Type
+    "Virtually Staged" in the photo's text field and upload the empty-room original
+    directly after it. Off the MLS, on flyers or your own site, the AB 723 statement with a
+    link to the original still applies; the <a href="/tools/disclosure-generator/">disclosure
+    generator</a> writes it.
+  </p>
+  <h3>Painted kitchen cabinets for a home sold "as is": not allowed</h3>
+  <p>
+    Cabinetry and paint color are real-property elements. The seller isn't refinishing the
+    cabinets before close, so the exception doesn't apply. Use the unedited photo, and if
+    you want to show the possibility, put a rendering in the Supplements with a notice that
+    the work isn't included in the price.
+  </p>
+  <h3>New-build listing with the finished landscaping: allowed</h3>
+  <p>
+    If the builder is installing that landscaping before close as part of the listed price,
+    the exception applies. Rule 11.5(c) allows renderings of conditions that will be in
+    place at closing, under the 11.5.2 requirements. Label it and keep it truthful.
+  </p>
+  <h3>Exterior with the power lines removed: not allowed</h3>
+  <p>
+    Utility poles are named among the outside elements that may not be altered, with no
+    exception. A disclosure doesn't help. Upload the photo with the lines in it.
+  </p>
+
+  <h2>Other CRMLS media rules that catch photographers</h2>
+  <ul>
+    <li><strong>Exterior photo within two days.</strong> Rule 11.5.1 requires at least one photo or rendering of a substantial portion of the exterior within two days of entry, kept in the listing in every status. Business Opportunity listings are exempt, and a seller's written no-photo instruction has to reach the MLS within the same two days.</li>
+    <li><strong>No branding.</strong> Rule 11.5(e) bars content that identifies the agent or brokerage, including signs, logos, contact information, identifiable people, external links and team names.</li>
+    <li><strong>Off-property views get a caption.</strong> Rule 11.5(c) requires photos of views that aren't of or from the property, and photos of HOA amenities, to be captioned as such.</li>
+  </ul>
+
+  <h2>Questions</h2>
+  {faq.map((f) => (
+    <>
+      <h3>{f.q}</h3>
+      <p>{f.a}</p>
+    </>
+  ))}
+  <p class="text-sm">
+    Source: <a href={SOURCE}>CRMLS Rules &amp; Policies</a> (effective July
+    10, 2026), Rules 11.5–11.5.3. Check the current version before relying on this summary;
+    this is not legal advice.
+  </p>
+</ArticleLayout>

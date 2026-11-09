@@ -44,6 +44,8 @@ You're not the MLS compliance officer. Your agent clients are. What you *are* re
 
 The compliance requirement itself—the decision about whether to disclose in the MLS, how to label it, and when—belongs to the broker and agent. Your job is to make sure they have the information to make that choice correctly.
 
+What that choice looks like differs by board. CRMLS bans some edits outright, such as removing utility poles, even with a label; MLSListings wants every enhancement noted in the public remarks; Bay East wants the original immediately after the altered photo. The [California MLS photo requirements](/mls-photo-requirements/) page compares the rules, quoted from each MLS's own rules document.
+
 ## Building Your Compliance Workflow
 
 Here's what a practical system looks like:

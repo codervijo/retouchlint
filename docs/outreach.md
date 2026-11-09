@@ -64,7 +64,7 @@ role addresses are listed; individual staff emails are left out.
 | # | Target | Route | Contact | Source page |
 |---|---|---|---|---|
 | 1 | SDMLS | phone / support page (no email published) | (858) 726-9657 | https://sdmls.com/contact-us/ |
-| 2 | MLSListings | contact form (they say replies come within 72h) · phone | 1-866-734-5787 | https://www.mlslistings.com/about-us/contact-us/ |
+| 2 | MLSListings | contact form (they say replies come within 72h) · phone · compliance team (listed on their AB 723 article) | 1-866-734-5787 · compliance@mlslistings.com / 408-874-0200 opt 2 | https://www.mlslistings.com/about-us/contact-us/ |
 | 3 | Bay East | email (website-update requests) | websiteupdates@bayeast.org (general: info@bayeast.org) | https://bayeast.org/contact/ |
 | 4 | Pasadena-Foothills REALTORS® | "Email Communications" form (Communications • Media) · phone | (626) 795-2455 | https://pfar.org/support/ |
 | 5 | SDAR | email (their AB 723 page is a news article) | editor@sdar.com (alt: marketing@sdar.com) | https://www.sdar.com/about/contact-us.html |

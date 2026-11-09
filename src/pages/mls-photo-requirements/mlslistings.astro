@@ -1,0 +1,155 @@
+---
+// /mls-photo-requirements/mlslistings/ — MLSListings Rule 7.11.2 (AB 723 amendment).
+// Source quotes: docs/mls-sources.md § MLSListings (primary-source check 2026-11-08).
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+
+const path = "/mls-photo-requirements/mlslistings/";
+const SOURCE = "https://support.mlslistings.com/s/article/AB723---Altered-Images-Overview";
+const title = "MLSListings Altered Photo Rule 7.11.2 Explained";
+const h1 = "MLSListings Rule 7.11.2: altered photos, remarks disclosure, and no links";
+const description =
+  "MLSListings Rule 7.11.2: upload the original, label the altered photo, note any enhancement (color too) in the remarks. No links on photos.";
+
+const faq = [
+  {
+    q: "Do I have to mention color correction on MLSListings?",
+    a: "Yes, in the public remarks. Rule 7.11.2 says any enhancements or modifications to images must be disclosed in the public remarks, and gives color enhancement as an example. AB 723 doesn't require a disclosure for color correction, but this MLS rule does.",
+  },
+  {
+    q: "Can I use a QR code to the originals instead of uploading them?",
+    a: "Not inside the MLS. MLSListings says it does not allow links of any kind from the photos in a listing, and the rule requires you to submit the original, unaltered version. Links and QR codes can still be used on print and social media.",
+  },
+  {
+    q: "What label does MLSListings accept?",
+    a: "\"altered\", \"digitally altered\", \"AI altered\", or some accurate, substantially similar term, marked in a reasonably conspicuous manner on the altered image.",
+  },
+  {
+    q: "Does the original have to sit next to the altered photo?",
+    a: "The rule text MLSListings published doesn't set a position. It requires you to submit the original. Placing it right after the altered photo costs nothing and makes the pair obvious to buyers.",
+  },
+  {
+    q: "Who do I ask about a specific listing?",
+    a: "MLSListings Compliance. Its AB 723 article lists compliance@mlslistings.com and 408-874-0200, option 2.",
+  },
+];
+
+const schema = [
+  {
+    "@type": "Article",
+    headline: h1,
+    description,
+    mainEntityOfPage: `https://retouchlint.com${path}`,
+    author: { "@type": "Organization", name: "RetouchLint" },
+    publisher: { "@id": "https://retouchlint.com/#organization" },
+  },
+  {
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+
+const related = [
+  { url: "/mls-photo-requirements/", anchor: "All California MLS photo rules compared" },
+  { url: "/mls-photo-requirements/crmls/", anchor: "CRMLS: edits it bans outright" },
+  { url: "/mls-photo-requirements/bay-east/", anchor: "Bay East MLS altered-photo rule" },
+  { url: "/blog/original-image-access/", anchor: "Giving buyers access to the original image" },
+];
+---
+<ArticleLayout
+  title={title}
+  h1={h1}
+  description={description}
+  path={path}
+  related={related}
+  breadcrumbs={[
+    { name: "Home", url: "/" },
+    { name: "MLS photo requirements", url: "/mls-photo-requirements/" },
+    { name: "MLSListings", url: path },
+  ]}
+  schema={schema}
+>
+  <p>
+    MLSListings Rule 7.11.2 requires three things for an edited listing photo: upload the
+    original, unaltered version; mark the altered photo "altered", "digitally altered" or
+    "AI altered" (or a substantially similar term); and disclose any enhancement or
+    modification in the public remarks, including color enhancement. It also bans links of
+    any kind from listing photos, so the link or QR code that AB 723 allows elsewhere
+    can't stand in for the original here.
+  </p>
+
+  <h2>The rule</h2>
+  <p>
+    MLSListings' Rules Committee and Board amended Rule 7.11.2, Listing Photograph
+    Requirements, in support of AB 723. For altered images, the amended text says:
+  </p>
+  <blockquote>
+    "Any enhancements or modifications to images must be disclosed in the public remarks,
+    e.g. color enhancement or virtual staging. A Participant or Subscriber who submits any
+    digitally created or altered image must also (i) submit the original, unaltered version
+    of the digitally altered image, and (ii) ensure that the digitally altered image is
+    marked in a reasonably conspicuous manner as "altered," "digitally altered," "AI
+    altered," or some accurate, substantially similar, term."
+  </blockquote>
+
+  <h2>Where it differs from AB 723</h2>
+  <h3>Routine enhancements still get a remarks line</h3>
+  <p>
+    AB 723 excludes lighting, white balance, color correction, exposure and similar
+    adjustments from its definition of a digitally altered image, so those photos need no
+    statutory statement. MLSListings' remarks requirement covers "any enhancements or
+    modifications" and names color enhancement as an example. For a listing whose photos
+    were only color-corrected, a short line in the public remarks covers it.
+  </p>
+  <h3>The original goes in the listing, not behind a link</h3>
+  <p>
+    The statute lets an advertisement point to the original through a link, URL or QR
+    code. MLSListings says it "does not allow links of any kind from the photos in a
+    listing" and that QR codes and links belong in other media such as print and social.
+    In the MLS, upload the original as its own photo.
+  </p>
+
+  <h2>Worked examples</h2>
+  <h3>Virtually staged great room</h3>
+  <p>
+    Mark the staged photo "Digitally Altered", upload the empty-room original, and add a
+    sentence to the public remarks such as "Photo 4 is virtually staged; the unstaged
+    original is photo 5."
+  </p>
+  <h3>Every photo color-corrected, nothing added or removed</h3>
+  <p>
+    No AB 723 statement and no "altered" label are needed, because nothing in the frame
+    changed. The remarks still need a note that the photos were color-enhanced.
+  </p>
+  <h3>Staged photo with a QR code to the originals: fails</h3>
+  <p>
+    The QR code is a link from a listing photo, which MLSListings doesn't allow, and the
+    original still hasn't been submitted. Remove the code, upload the original, and use
+    the QR code on the flyer instead. The <a href="/tools/disclosure-generator/">disclosure
+    generator</a> writes the flyer statement.
+  </p>
+
+  <h2>Other photo requirements in Rule 7.11.2</h2>
+  <ul>
+    <li>A property photo within one day after entry, except Members Only–Do Not Show listings. Existing buildings need a photo of the front.</li>
+    <li>No text-only images. Text or overlays are allowed only to describe property characteristics, such as boundaries, pointers or physical descriptions.</li>
+    <li>No photo by seller choice: use the MLS-provided "Seller Prefers No Photo" image, and keep the seller's written authorization to provide on request.</li>
+    <li>New construction: a realistic rendering of the front until the building is finished, then a photograph.</li>
+  </ul>
+
+  <h2>Questions</h2>
+  {faq.map((f) => (
+    <>
+      <h3>{f.q}</h3>
+      <p>{f.a}</p>
+    </>
+  ))}
+  <p class="text-sm">
+    Source: <a href={SOURCE}>MLSListings, "AB723 – Altered Images Overview"</a>, quoting
+    amended Rule 7.11.2. Check the current rule before relying on this summary; this is not
+    legal advice.
+  </p>
+</ArticleLayout>

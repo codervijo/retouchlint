@@ -1,0 +1,149 @@
+---
+// /mls-photo-requirements/bay-east/ — Bay East MLS Rules 11.5.1 / 11.5.2 (effective 2026-01-01).
+// Source quotes: docs/mls-sources.md § Bay East (primary-source check 2026-11-08).
+// The source page doesn't name the MLS, so this page doesn't either.
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+
+const path = "/mls-photo-requirements/bay-east/";
+const SOURCE = "https://bayeast.org/digitally-altered-mls-photo-rule/";
+const title = "Bay East MLS Rule 11.5.2: Digitally Altered Photos";
+const h1 = "Bay East MLS rules for digitally altered photos (11.5.1 and 11.5.2)";
+const description =
+  "Bay East's MLS rule for altered photos: upload the original, place it immediately after, and label the edit. Which labels count and what fails.";
+
+const faq = [
+  {
+    q: "Can the original go before the altered photo on Bay East?",
+    a: "The rule says immediately after. Rule 11.5.2 requires the original, unaltered version to be displayed immediately after the digitally altered image. CRMLS allows before or after; Bay East's text doesn't.",
+  },
+  {
+    q: "Can I label a staged photo \"Virtually Staged\"?",
+    a: "Bay East's FAQ gives \"Virtually Staged\" as an example label, but the rule text lists \"altered\", \"digitally altered\" and \"AI altered\" and has no \"substantially similar\" clause. \"Virtually Staged – Digitally Altered\" satisfies both readings.",
+  },
+  {
+    q: "Is the photographer or the agent responsible?",
+    a: "Bay East says the listing agent and broker are responsible for making sure listing content complies with MLS rules, regardless of who created or edited the photos.",
+  },
+  {
+    q: "Do listings entered before January 1, 2026 need fixing?",
+    a: "Bay East encourages agents to review Active, Pending and Hold listings for compliance. Labels can be added or updated at any time.",
+  },
+];
+
+const schema = [
+  {
+    "@type": "Article",
+    headline: h1,
+    description,
+    mainEntityOfPage: `https://retouchlint.com${path}`,
+    author: { "@type": "Organization", name: "RetouchLint" },
+    publisher: { "@id": "https://retouchlint.com/#organization" },
+  },
+  {
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+
+const related = [
+  { url: "/mls-photo-requirements/", anchor: "All California MLS photo rules compared" },
+  { url: "/mls-photo-requirements/crmls/", anchor: "CRMLS Rule 11.5.2 and its banned edits" },
+  { url: "/mls-photo-requirements/mlslistings/", anchor: "MLSListings Rule 7.11.2" },
+  { url: "/blog/what-counts-as-material-alteration/", anchor: "Which edits count as an alteration" },
+];
+---
+<ArticleLayout
+  title={title}
+  h1={h1}
+  description={description}
+  path={path}
+  related={related}
+  breadcrumbs={[
+    { name: "Home", url: "/" },
+    { name: "MLS photo requirements", url: "/mls-photo-requirements/" },
+    { name: "Bay East", url: path },
+  ]}
+  schema={schema}
+>
+  <p>
+    Under the MLS rules Bay East published for January 1, 2026, a digitally altered listing
+    photo needs its original, unaltered version uploaded and displayed immediately after
+    it. The altered photo must be marked in a reasonably conspicuous way as "altered",
+    "digitally altered" or "AI altered". What counts as altered follows AB 723 word for
+    word.
+  </p>
+
+  <h2>Rule 11.5.1: what counts as digitally altered</h2>
+  <p>
+    The definition matches Business and Professions Code § 10140.8(b). An image is
+    digitally altered when photo-editing software or AI adds, removes or changes elements.
+    The list includes fixtures, furniture, appliances, flooring, walls, paint color,
+    hardscape, landscape, façade and floor plans, plus things outside or visible from the
+    property such as streetlights, utility poles, views through windows and neighboring
+    properties. Edits limited to lighting, sharpening, white balance, color correction,
+    angle, straightening, cropping or exposure are not alterations.
+  </p>
+  <p>
+    So unlike CRMLS, Bay East doesn't ban landscape or utility-pole edits. They are
+    alterations that need the original and the label.
+  </p>
+
+  <h2>Rule 11.5.2: what you have to do</h2>
+  <ol>
+    <li>Submit the original, unaltered version of the altered image.</li>
+    <li>Display the original immediately after the altered image.</li>
+    <li>Mark the altered image "altered", "digitally altered" or "AI altered", reasonably conspicuously.</li>
+  </ol>
+  <p>
+    Bay East's instructions: after uploading, click "Label" beneath the photo, enter the
+    label text and save. The label then shows on the listing.
+  </p>
+
+  <h2>The label wording question</h2>
+  <p>
+    Bay East's FAQ offers "Digitally Altered Image", "Virtually Staged" and "Digital
+    Rendering" as example labels, and says the label must clearly disclose that the image
+    has been digitally altered. The rule text itself lists only the three terms above. A
+    label that contains "Digitally Altered" meets both, for example "Virtually Staged –
+    Digitally Altered".
+  </p>
+
+  <h2>Worked examples</h2>
+  <h3>Staged living room</h3>
+  <p>
+    Upload the staged photo labeled "Virtually Staged – Digitally Altered" and put the
+    empty-room original directly after it. The same order also works on CRMLS, which
+    accepts before or after.
+  </p>
+  <h3>Sky replaced and wires removed on the front exterior</h3>
+  <p>
+    Bay East's FAQ names sky replacement as an alteration, and utility poles are on the
+    rule's list, so it's an altered image: label it and put the original right after it. If the listing is also on CRMLS, the
+    wire removal is not allowed there at all. See the <a href="/mls-photo-requirements/crmls/">CRMLS
+    rule</a>.
+  </p>
+  <h3>Original uploaded at the end of the gallery: fails</h3>
+  <p>
+    The original is in the listing, but not immediately after the altered photo. Drag it
+    into place. For advertising outside the MLS, add the AB 723 statement with a link to
+    the original; the <a href="/tools/disclosure-generator/">disclosure generator</a>
+    writes it.
+  </p>
+
+  <h2>Questions</h2>
+  {faq.map((f) => (
+    <>
+      <h3>{f.q}</h3>
+      <p>{f.a}</p>
+    </>
+  ))}
+  <p class="text-sm">
+    Source: <a href={SOURCE}>Bay East Association of REALTORS®, "Digitally Altered MLS
+    Photo Rule"</a>. Check the current rules before relying on this summary; this is not
+    legal advice.
+  </p>
+</ArticleLayout>

@@ -99,3 +99,11 @@ to surface "last AI prompt" per project. Keep entries append-only.
 
 > "look up contacts for the priority-B targets" — contacts for the 4 photographer targets, read
 > from their own sites (curl, no treg spend). Insight Photos publishes no email (phone/social only).
+
+## 2026-11-08 — v1.H started (MLS photo requirements hub)
+
+> "start v1.H" — read primary sources (CRMLS Rules & Policies PDF eff. 2026-07-10, MLSListings
+> Rule 7.11.2, Bay East 11.5.1/11.5.2, SDMLS AB 723 page; treg ~$0.001) into `docs/mls-sources.md`.
+> Built `/mls-photo-requirements/` hub + `crmls/`, `mlslistings/`, `bay-east/` pages, nav/footer
+> link, generator caveat (CRMLS now bans landscape/utility-pole edits). Photo specs dropped: no
+> primary source. Not committed, not deployed.

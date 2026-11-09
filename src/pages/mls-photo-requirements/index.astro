@@ -1,0 +1,231 @@
+---
+// /mls-photo-requirements/ — v1.H hub: California MLS rules for altered listing photos.
+// Every MLS rule stated here is quoted in docs/mls-sources.md with its source URL
+// (primary-source check, 2026-11-08). Statute: Bus. & Prof. Code § 10140.8.
+// FAQPage schema is built from the same `faq` array the page renders.
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+import { PILLAR_URL } from "../../lib/links";
+
+const path = "/mls-photo-requirements/";
+const title = "California MLS Photo Requirements for Altered Images";
+const h1 = "MLS photo requirements in California: what each MLS adds to AB 723";
+const description =
+  "CRMLS, MLSListings, Bay East and SDMLS rules for edited listing photos compared: labels, where the original goes, and edits CRMLS bans outright.";
+
+const faq = [
+  {
+    q: "If I follow AB 723, am I compliant with my MLS?",
+    a: "Not necessarily. AB 723 sets the floor for advertising. MLS rules add their own requirements on top: CRMLS bans some edits outright, MLSListings wants every enhancement — even color — noted in the public remarks, and Bay East and CRMLS dictate where the original photo sits in the listing.",
+  },
+  {
+    q: "Can I remove power lines or replace the lawn in a CRMLS listing photo if I disclose it?",
+    a: "No. Since CRMLS's July 10, 2026 rules, Subscribers may not add any photo altered to add, remove, or modify elements outside of or visible from the property, such as streetlights and utility poles. Landscape and other real-property elements can only be altered if the property will be improved to match by close, as part of the listed price. Disclosure does not cure it.",
+  },
+  {
+    q: "Can I put a QR code or link to the originals on the photo itself?",
+    a: "Not on MLSListings, which says it does not allow links of any kind from the photos in a listing. CRMLS's branding rule also lists external links as prohibited branding. On these MLSs the original goes into the listing as its own photo instead; save the link or QR code for flyers, social posts and your own website.",
+  },
+  {
+    q: "What label should I use on an altered photo?",
+    a: "Use one of the exact terms your MLS lists. CRMLS accepts \"Photo Modified\", \"Virtually Staged\", \"Digitally Altered\" or \"AI Altered\" or an accurate, substantially similar term. MLSListings accepts \"altered\", \"digitally altered\", \"AI altered\" or an accurate, substantially similar term. Bay East's rule text lists \"altered\", \"digitally altered\" and \"AI altered\". \"Digitally Altered\" satisfies all three.",
+  },
+  {
+    q: "What photo size does a California MLS require?",
+    a: "The rules documents don't set it. CRMLS's Rules & Policies contain no pixel, file-size or aspect-ratio limit. Upload limits come from the listing software your MLS runs, so check its upload screen or help center rather than a generic chart.",
+  },
+];
+
+const schema = [
+  {
+    "@type": "Article",
+    headline: h1,
+    description,
+    mainEntityOfPage: `https://retouchlint.com${path}`,
+    author: { "@type": "Organization", name: "RetouchLint" },
+    publisher: { "@id": "https://retouchlint.com/#organization" },
+  },
+  {
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+
+const related = [
+  { url: "/mls-photo-requirements/crmls/", anchor: "CRMLS Rule 11.5.2 in detail" },
+  { url: "/mls-photo-requirements/mlslistings/", anchor: "MLSListings Rule 7.11.2 in detail" },
+  { url: "/mls-photo-requirements/bay-east/", anchor: "Bay East MLS Rules 11.5.1 and 11.5.2" },
+  { url: "/tools/disclosure-generator/", anchor: "Write the AB 723 disclosure statement" },
+  { url: PILLAR_URL, anchor: "Real estate photo disclosure guide" },
+  { url: "/blog/what-counts-as-material-alteration/", anchor: "Which edits count as altering a photo" },
+];
+---
+<ArticleLayout
+  title={title}
+  h1={h1}
+  description={description}
+  path={path}
+  related={related}
+  breadcrumbs={[{ name: "Home", url: "/" }, { name: "MLS photo requirements", url: path }]}
+  schema={schema}
+>
+  <p>
+    CRMLS, MLSListings, Bay East and SDMLS all added rules for digitally altered listing
+    photos to line up with AB 723, and none of them simply repeats the statute. All four
+    make you upload the unaltered
+    original and label the altered photo. Beyond that they differ: CRMLS forbids some edits
+    no matter how they are disclosed, MLSListings bans links on listing photos and wants
+    every enhancement named in the public remarks, and CRMLS and Bay East dictate exactly
+    where the original sits.
+  </p>
+
+  <h2>The rules side by side</h2>
+  <div class="overflow-x-auto">
+    <table>
+      <thead>
+        <tr>
+          <th>MLS</th>
+          <th>Rule</th>
+          <th>Label on the altered photo</th>
+          <th>Where the original goes</th>
+          <th>Goes further than AB 723</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><a href="/mls-photo-requirements/crmls/">CRMLS</a></td>
+          <td>11.5.2 (rules effective July 10, 2026)</td>
+          <td>"Photo Modified", "Virtually Staged", "Digitally Altered", "AI Altered", or a substantially similar term</td>
+          <td>Immediately before or after the altered photo</td>
+          <td>Bans altering real-property elements unless the home will match by close, and bans altering anything outside or visible from the property</td>
+        </tr>
+        <tr>
+          <td><a href="/mls-photo-requirements/mlslistings/">MLSListings</a></td>
+          <td>7.11.2</td>
+          <td>"altered", "digitally altered", "AI altered", or a substantially similar term</td>
+          <td>Uploaded with the listing; no position stated</td>
+          <td>Any enhancement or modification, color included, must be disclosed in the public remarks; no links of any kind from listing photos</td>
+        </tr>
+        <tr>
+          <td><a href="/mls-photo-requirements/bay-east/">Bay East</a></td>
+          <td>11.5.1 and 11.5.2</td>
+          <td>"altered", "digitally altered", or "AI altered"</td>
+          <td>Immediately after the altered photo</td>
+          <td>Fixed position for the original</td>
+        </tr>
+        <tr>
+          <td>SDMLS</td>
+          <td>No rule number published</td>
+          <td>"Clearly disclosed as digitally altered"</td>
+          <td>"Available and paired with the altered image"</td>
+          <td>Altered-image indicators and pairings must survive into IDX, VOW, API and syndication displays</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p>
+    Each row is drawn from the MLS's own rules document or compliance page, linked on its
+    detail page. SDMLS publishes a summary of its requirements but no rule text, so it has
+    no detail page yet.
+  </p>
+
+  <h2>AB 723 is the floor, not the checklist</h2>
+  <p>
+    Business and Professions Code § 10140.8, the section AB 723 added, governs advertising:
+    the altered image needs a reasonably conspicuous statement on or next to it saying it
+    was altered, plus a link, URL or QR code to a public page showing the original. It
+    applies to every ad, from the MLS to a flyer. The <a href={PILLAR_URL}>disclosure
+    guide</a> covers the statute itself.
+  </p>
+  <p>
+    An MLS is a private membership service, and its rules bind its Participants and
+    Subscribers whatever the statute says. That is why MLS rules can be stricter than the
+    law, and the three below are.
+  </p>
+
+  <h3>Some edits are banned, not just disclosed (CRMLS)</h3>
+  <p>
+    CRMLS narrowed its definition of a "Digitally Altered Image" to edits involving
+    furniture or appliances, which in practice means virtual staging. It then prohibits
+    adding any photo altered to add, remove or modify real-property elements (flooring,
+    walls, windows, cabinetry, paint color, hardscape, landscape, façade, fixtures, floor
+    plans) unless the property will be improved to match by close as part of the listed
+    price. It also prohibits altering elements outside of or visible from the property, such
+    as streetlights, utility poles, views through windows and neighboring properties. A
+    label does not make those photos acceptable on CRMLS.
+  </p>
+
+  <h3>No links on listing photos (MLSListings)</h3>
+  <p>
+    The statute lets you satisfy the original-image requirement with a link or QR code.
+    MLSListings says it does not allow links of any kind from the photos in a listing, so
+    inside that MLS the original has to be uploaded as its own photo. Links and QR codes
+    remain fine on print and social media.
+  </p>
+
+  <h3>Color enhancement goes in the remarks (MLSListings)</h3>
+  <p>
+    AB 723 exempts color correction, exposure and white balance. MLSListings Rule 7.11.2
+    still says "any enhancements or modifications to images must be disclosed in the public
+    remarks, e.g. color enhancement or virtual staging." A listing with only color-corrected
+    photos needs no AB 723 statement, but on MLSListings it still needs a line in the
+    remarks.
+  </p>
+
+  <h2>Three listings, three outcomes</h2>
+  <h3>A virtually staged living room</h3>
+  <p>
+    Fine on every MLS here, with work. Label the staged photo "Digitally Altered", upload
+    the empty-room original and place it immediately after the staged photo. That placement
+    satisfies both Bay East (after) and CRMLS (before or after). On MLSListings, also add a
+    sentence to the public remarks saying the photo is virtually staged.
+  </p>
+  <h3>A front exterior with the power lines removed and a greener lawn</h3>
+  <p>
+    Under AB 723 alone this is allowed if it is disclosed. On CRMLS it cannot go in the
+    listing at all: utility poles are named among the outside elements that may not be
+    altered, and the lawn falls under landscape. The fix is to use the unedited exterior. The
+    altered version can still appear in advertising outside the MLS, with the statutory
+    disclosure.
+  </p>
+  <h3>A QR code stamped on the staged photo</h3>
+  <p>
+    A common shortcut, and wrong for the MLS twice over. MLSListings bars links from
+    listing photos. CRMLS treats external links in media as prohibited branding. Upload the
+    original into the listing instead, and keep the QR code for the flyer.
+  </p>
+
+  <h2>Photo size and file limits</h2>
+  <p>
+    The rules documents don't set them. CRMLS's Rules &amp; Policies contain no pixel,
+    file-size, aspect-ratio or photo-count requirement. Those limits belong to the listing
+    software your MLS uses, so they live in that software's upload screen and help center.
+    Pixel charts that claim to cover every MLS are generalizations. What the rules do require is a
+    photo of the exterior soon after entry: within two days on CRMLS, and within one day
+    (of the front of the building) on MLSListings.
+  </p>
+
+  <h2>Before you upload</h2>
+  <ul>
+    <li>Find which MLS the listing is in. Agents can belong to more than one, and the rules above differ.</li>
+    <li>On CRMLS, check every exterior edit against the prohibited list before writing any disclosure.</li>
+    <li>Use "Digitally Altered" as the label unless your MLS requires something else; it is on every list above.</li>
+    <li>Put the original immediately after the altered photo. That satisfies every placement rule covered here.</li>
+    <li>Use the <a href="/tools/disclosure-generator/">disclosure generator</a> for the AB 723 statement on advertising outside the MLS, where links and QR codes are allowed.</li>
+  </ul>
+
+  <h2>Questions</h2>
+  {faq.map((f) => (
+    <>
+      <h3>{f.q}</h3>
+      <p>{f.a}</p>
+    </>
+  ))}
+  <p class="text-sm">
+    MLS rules change. CRMLS revised Rule 11.5.2 in July 2026. Check your MLS's current rules
+    document before relying on this summary. This is not legal advice.
+  </p>
+</ArticleLayout>
