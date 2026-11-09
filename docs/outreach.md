@@ -39,9 +39,9 @@ guessed). Find each one from the site's contact page.
 | 1 | A | SDMLS | https://sdmls.com/ab-723-digitally-altered-images-sdmls-requirements/ · https://support.sdmls.com/support/solutions/articles/150000215744-ab-723-made-simple-new-rules-for-real-estate-photos | MLS | add to resources → generator |
 | 2 | A | MLSListings | https://support.mlslistings.com/s/article/AB723---Altered-Images-Overview | MLS | add to resources → generator |
 | 3 | A | Bay East Association of REALTORS® | https://bayeast.org/digitally-altered-mls-photo-rule/ | association + MLS | add to resources → generator |
-| 4 | A | Pacific West Association of REALTORS® (PFAR) | https://pfar.org/californias-new-altered-image-law-ab-723-what-real-estate-pros-need-to-know-starting-january-1st-2026/ | association | add to resources → generator |
+| 4 | A | Pasadena-Foothills REALTORS® (PFAR) | https://pfar.org/californias-new-altered-image-law-ab-723-what-real-estate-pros-need-to-know-starting-january-1st-2026/ | association | add to resources → generator |
 | 5 | A | San Diego Association of REALTORS® | https://www.sdar.com/news/are-your-listing-photos-compliant.html | association | add to resources → generator |
-| 6 | A | San Francisco Association of REALTORS® | https://sfar.freshdesk.com/support/solutions/articles/69000874999-digitally-altered-images-ab-723- | association | add to resources → generator |
+| 6 | A | San Francisco Association of REALTORS® (sfrealtors.com; not sfar.com, which is Santa Fe) | https://sfar.freshdesk.com/support/solutions/articles/69000874999-digitally-altered-images-ab-723- | association | add to resources → generator |
 | 7 | B | Open Homes Photography | https://www.open-homes.com/california-ab-723/ (a resources page) · blog post | photo company | add to "AB 723 Resources" → generator |
 | 8 | B | John Turton Photography | https://johnturtonphoto.com/ab-723-real-estate-photo-disclosure/ | photographer | cite as a tool for agent clients → generator |
 | 9 | B | Insight Photos | https://www.insightphotos.net/faq | photographer | link from AB 723 FAQ answer → generator |
@@ -55,6 +55,23 @@ fastdemocracy), which don't link to tools.
 
 Not found yet: a CRMLS-hosted AB 723 page (searches turned up none) and a C.A.R.
 page. Check both before the second batch.
+
+## Contacts — priority A (looked up 2026-11-08)
+
+All of these were read from each organisation's own contact or staff page. Only
+role addresses are listed; individual staff emails are left out.
+
+| # | Target | Route | Contact | Source page |
+|---|---|---|---|---|
+| 1 | SDMLS | phone / support page (no email published) | (858) 726-9657 | https://sdmls.com/contact-us/ |
+| 2 | MLSListings | contact form (they say replies come within 72h) · phone | 1-866-734-5787 | https://www.mlslistings.com/about-us/contact-us/ |
+| 3 | Bay East | email (website-update requests) | websiteupdates@bayeast.org (general: info@bayeast.org) | https://bayeast.org/contact/ |
+| 4 | Pasadena-Foothills REALTORS® | "Email Communications" form (Communications • Media) · phone | (626) 795-2455 | https://pfar.org/support/ |
+| 5 | SDAR | email (their AB 723 page is a news article) | editor@sdar.com (alt: marketing@sdar.com) | https://www.sdar.com/about/contact-us.html |
+| 6 | San Francisco Association of REALTORS® | email (their AB 723 page is an MLS help article) | mls@sfrealtors.com | https://sfrealtors.com/ |
+
+For the two phone-only routes (SDMLS, and MLSListings if the form goes unanswered),
+ask on the call which address handles website or resource-page updates, then send T1.
 
 ## Pitch templates
 

@@ -87,3 +87,10 @@ to surface "last AI prompt" per project. Keep entries append-only.
 > DataForSEO ($0.09). Legality/disclosure terms ≤10/mo or unreported; state variants all
 > unreported; head terms are vendor SERPs and declining. "yes, update v1.I in the PRD" — v1.I
 > is now one consolidated legality/meaning page + per-edit-type pages; per-state pages dropped.
+
+## 2026-11-08 — v1.G priority-A contacts
+
+> "look up contact pages for the priority-A targets" — role contacts for all 6, read from each
+> org's own contact page (curl, no treg spend). Corrected two wrong org names in
+> `docs/outreach.md`: PFAR = Pasadena-Foothills REALTORS® (not "Pacific West"); SF REALTORS® =
+> sfrealtors.com (sfar.com is Santa Fe).
