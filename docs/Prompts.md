@@ -94,3 +94,8 @@ to surface "last AI prompt" per project. Keep entries append-only.
 > org's own contact page (curl, no treg spend). Corrected two wrong org names in
 > `docs/outreach.md`: PFAR = Pasadena-Foothills REALTORS® (not "Pacific West"); SF REALTORS® =
 > sfrealtors.com (sfar.com is Santa Fe).
+
+## 2026-11-08 — v1.G priority-B contacts
+
+> "look up contacts for the priority-B targets" — contacts for the 4 photographer targets, read
+> from their own sites (curl, no treg spend). Insight Photos publishes no email (phone/social only).

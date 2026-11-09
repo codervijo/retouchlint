@@ -73,6 +73,17 @@ role addresses are listed; individual staff emails are left out.
 For the two phone-only routes (SDMLS, and MLSListings if the form goes unanswered),
 ask on the call which address handles website or resource-page updates, then send T1.
 
+## Contacts — priority B (looked up 2026-11-08)
+
+All of these were read from each business's own site.
+
+| # | Target | Route | Contact | Source page |
+|---|---|---|---|---|
+| 7 | Open Homes Photography | contact form · phone | 1-800-647-8310 / 408-944-5289 | https://www.open-homes.com/contact-us/ |
+| 8 | John Turton Photography | email (the business address on his site) · phone | john@johnturtonphoto.com / 916-628-8887 | https://johnturtonphoto.com/ |
+| 9 | Insight Photos | phone or social DM (no email published; `/contact` blocks scripted fetches, so check it in a browser) | 760-440-5583 · facebook.com/InsightPhotosSanDiego · instagram.com/insightphotossd | https://www.insightphotos.net/ |
+| 10 | Davies Imaging | email · contact form | info@daviesimaging.com | https://www.daviesimaging.com/contact |
+
 ## Pitch templates
 
 Send from the operator's name. The reply-to is `hello@lamill.io` (retouchlint.com has
