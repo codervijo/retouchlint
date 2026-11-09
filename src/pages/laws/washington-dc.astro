@@ -1,0 +1,138 @@
+---
+// /laws/washington-dc/ — DC B26-0858 (introduced 2026-10-09).
+// Source quotes: docs/law-sources.md § Washington, DC.
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+
+const path = "/laws/washington-dc/";
+const SOURCE = "https://lims.dccouncil.gov/Legislation/B26-0858";
+const TEXT = "https://lims.dccouncil.gov/downloads/LIMS/62714/Introduction/B26-0858-Introduction.pdf";
+const title = "DC Bill B26-0858: Altered Listing Photos Disclosure";
+const h1 = "Washington, DC's listing photo bill (B26-0858): disclose, describe, and link the original";
+const description =
+  "DC's B26-0858 would make undisclosed altered listing photos a deceptive trade practice, for sales and rentals, and require describing what changed.";
+
+const faq = [
+  {
+    q: "Is B26-0858 law yet?",
+    a: "No. It was introduced in the DC Council on October 9, 2026. If the Council passes it and the Mayor approves it, it still has to complete a 30-day congressional review period before taking effect.",
+  },
+  {
+    q: "What does it add that California's law doesn't?",
+    a: "A written description. The disclosure would have to include \"a written description of material differences between any digitally altered image and the real property's actual condition, features, and amenities.\" California only requires a statement that the image was altered.",
+  },
+  {
+    q: "Does it cover apartment rentals?",
+    a: "Yes. It applies to an advertisement or listing for real property \"whether available for rent or sale.\" The sponsor's statement singles out stock photos of generic apartment rooms that misrepresent window views and unit size.",
+  },
+  {
+    q: "How would it be enforced?",
+    a: "Failing to disclose would become an unlawful trade practice under DC's Consumer Protection Procedures Act, and the bill amends the real estate licensing law so a licensee's violation also counts as false or misleading advertising.",
+  },
+];
+
+const schema = [
+  {
+    "@type": "Article",
+    headline: h1,
+    description,
+    mainEntityOfPage: `https://retouchlint.com${path}`,
+    author: { "@type": "Organization", name: "RetouchLint" },
+    publisher: { "@id": "https://retouchlint.com/#organization" },
+  },
+  {
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+
+const related = [
+  { url: "/laws/", anchor: "All listing photo disclosure laws and bills" },
+  { url: "/laws/new-york/", anchor: "New York's altered listing photo bill" },
+  { url: "/laws/california-rentals/", anchor: "California's rental listing photo law" },
+  { url: "/tools/disclosure-generator/", anchor: "Write the disclosure statement" },
+];
+---
+<ArticleLayout
+  title={title}
+  h1={h1}
+  description={description}
+  path={path}
+  related={related}
+  breadcrumbs={[
+    { name: "Home", url: "/" },
+    { name: "Disclosure laws", url: "/laws/" },
+    { name: "Washington, DC", url: path },
+  ]}
+  schema={schema}
+>
+  <p>
+    DC Council bill B26-0858, the Restricting Editing and Alterations in Listing Photos
+    Amendment Act of 2026, would require any ad or listing for DC property, for sale or
+    rent, that uses a digitally altered photo to carry a clear and conspicuous disclosure.
+    The disclosure would have to include a written description of how the photo differs
+    from the property's actual condition, and the listing would have to include a
+    publicly accessible, unedited version. It was introduced on October 9, 2026 and is not
+    yet law.
+  </p>
+
+  <h2>What the bill would require</h2>
+  <p>A new § 28-3904(nn) of DC's Consumer Protection Procedures Act would make it unlawful to:</p>
+  <blockquote>
+    "Fail to include a clear and conspicuous disclosure in an advertisement or listing for
+    real property, whether available for rent or sale, that the advertisement includes a
+    digitally altered image. The disclosure shall include a written description of material
+    differences between any digitally altered image and the real property's actual
+    condition, features, and amenities. The advertisement or listing shall include a
+    publicly accessible and unedited version of any digitally altered image."
+  </blockquote>
+  <p>
+    Three requirements, then: the disclosure, the description of differences, and the
+    unedited original.
+  </p>
+
+  <h2>What counts as digitally altered</h2>
+  <p>
+    The definition follows California's: altered with photo-editing software or AI to add,
+    remove or change fixtures, furniture, appliances, flooring, walls, paint color,
+    hardscape, landscape, façade or floor plans, or elements outside or visible from the
+    property such as streetlights, utility poles, views through windows and neighboring
+    properties. Excluded are common adjustments such as lighting, sharpening, white
+    balance, color correction, angle, straightening, cropping or exposure "that do not
+    materially change the representation of the real property." The word "materially"
+    is DC's addition.
+  </p>
+
+  <h2>Why the description requirement matters</h2>
+  <p>
+    Under California's law, "Digitally altered — original at [link]" is a complete
+    disclosure. Under this bill it wouldn't be. You would also need something like
+    <em>"Furniture and decor added digitally; the room is unfurnished,"</em> or
+    <em>"Window view replaced; the actual view faces the neighboring building."</em> That is
+    more work per photo, and it is the part a generic label can't satisfy.
+  </p>
+
+  <h2>Who's behind it</h2>
+  <p>
+    Councilmember Christina Henderson introduced it with Councilmembers Frumin, Nadeau,
+    Bonds, White, Lewis George and Parker. Her statement says digitally altered photos "are
+    common in home and apartment listings in the District," cites California's AB 723, and
+    says New York City is considering rulemaking for similar restrictions.
+  </p>
+
+  <h2>Questions</h2>
+  {faq.map((f) => (
+    <>
+      <h3>{f.q}</h3>
+      <p>{f.a}</p>
+    </>
+  ))}
+  <p class="text-sm">
+    Sources: <a href={SOURCE}>DC Council LIMS, B26-0858</a> and the <a href={TEXT}>bill as
+    introduced</a>. Bills change before passage; check the current version. This is not
+    legal advice.
+  </p>
+</ArticleLayout>

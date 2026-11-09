@@ -1,30 +1,73 @@
 ---
-title: "California Photo Disclosure Rules for Real Estate (AB 723)"
-h1: "California Real Estate Photo Disclosure: What Photographers Need to Know Right Now"
-description: "AB 723 took effect January 1, 2026. What California photographers must disclose, and why every altered listing photo now needs a link to the original."
-keyword: "california real estate photo disclosure"
+title: "AB 723 Explained: California's Altered Listing Photo Law"
+h1: "AB 723 explained: California's law on digitally altered listing photos"
+description: "AB 723 requires a disclosure and a link to the original on every altered listing photo in California. What counts, who's covered, and the 2027 changes."
+keyword: "ab 723"
 ---
 
-When your agent client asks "did you edit this photo?", you need a clear answer—and a record to back it up. California AB 723 tightened disclosure rules for property photography, and the confusion is immediate: What exactly changed? Which edits need disclosure? How do you prove you've complied? Real estate photographers and small media companies in California are being asked these questions daily, and without a defensible audit trail, both you and your agent clients face compliance exposure. This post walks you through what AB 723 actually requires, why your workflow needs to change now, and how to document edits in a way that protects you legally and builds trust with agents.
-## Understanding AB 723 and California's Photo Disclosure Rules
-California AB 723 (Business and Professions Code § 10140.8, effective January 1, 2026) sets out what happens when a digitally altered image appears in an advertisement or promotional material for a property sale. Two things are required: a reasonably conspicuous statement, on or adjacent to the image, saying the image has been altered; and a link, URL, or QR code to a publicly accessible copy of the original, unaltered image. Note what is *not* covered — colour correction, exposure, white balance, sharpening, cropping, and straightening are expressly excluded. The statute is aimed at images where elements of the property were added, removed, or changed.
-The intent is sound: buyers deserve to know whether the photos they're seeing are accurate representations of the property. But the implementation creates immediate friction for photographers. The statute doesn't distinguish between "light touch" edits and dramatic alterations, which means your exposure starts the moment you adjust exposure, saturation, or remove distracting objects. Without a documented disclosure process, you can't prove what you did or didn't change—and that absence of proof is itself a compliance failure.
-## Why This Matters to Your Bottom Line
-Agent inquiries about edited photos aren't rare anymore—they're routine. Agents are asking because they're liable too. If a buyer claims they were deceived by a listing photo, the agent's broker is on the hook, and they're rightfully pushing photographers to clarify what was done. If you can't produce a clear, timestamped record of your edits, you've created liability for yourself and the agent, and you've just lost a repeat client.
-Beyond the immediate agent relationship, compliance mistakes create two problems: First, they expose you to disputes and potential legal claims. A buyer or broker who claims your edits misrepresented the property has a claim against you unless you can document exactly what you changed and how it was disclosed. Second, without an audit trail, you have no defensible position when a complaint lands. Even if you believe your edits were minor or standard practice, you can't prove it.
-This isn't a hypothetical. Photographers and small media companies in California are already navigating agent calls and needing answers that hold up under scrutiny.
-## Building Your Photo Disclosure Workflow
-The core requirement is straightforward: document what you edited, how significantly, and ensure that disclosure reaches the agent and listing. Here's how to systematize it:
-### Start at Capture
-Before you edit a single image, establish a baseline. Shoot your unedited source files as a reference point—these become your audit trail. Keep them separate from final delivery files. This matters because, under real estate photo disclosure rules, you need to be able to show what the property looked like before editing.
-### Document Edits Clearly
-For each image, maintain a simple edit log. Note what you adjusted: exposure, white balance, shadow/highlight recovery, object removal, cropping, or other material changes. Be honest about the magnitude—"removed trash can from foreground" is material; "brightened shadows by 10%" is standard post-processing. The difference matters for disclosure.
-### Create a Disclosure Statement
-Build a standard disclosure statement that travels with your final images. It should state clearly: "The following photos include post-processing edits for exposure, color, and composition. Specific edits include [list them]." This doesn't require legal language—clarity and accuracy are what count. Agents will use this to satisfy their own disclosure obligations.
-### Deliver Audit Trail with Images
-When you hand over final images to the agent, include your edit documentation. Use a simple format: a PDF, a spreadsheet, or even a text file that lists each image, what was edited, and the nature of the change. This becomes the agent's proof that disclosure happened, and your proof that you acted responsibly.
-## Protecting Yourself and Your Clients
-Documentation creates defensibility. If an edit is questioned later, you can produce a contemporaneous record showing it was disclosed. That record protects both you and the agent.
-Consider systemizing this further: Create a template edit log and use it for every shoot. Version your files clearly so final-approved images are easy to distinguish from draft edits. Store these records securely—you may need them years later if a dispute surfaces.
-Real estate photo disclosure rules exist across multiple states now, and the trend is toward stricter requirements, not looser ones. Building this habit in California positions you well if you expand into other markets. Agents who see you documenting edits proactively will view you as a lower-risk partner, and that reputation becomes a competitive advantage.
-The key insight: compliance isn't about hiding what you did. It's about being able to prove you did it responsibly and disclosed it clearly. When an agent asks "what changed?", the right answer is "here's exactly what changed—and here's my record to prove it."
+AB 723 is the California law that, since January 1, 2026, requires real estate agents and brokers to disclose digitally altered photos in property ads. Every altered image needs a statement on or next to it saying it was altered, plus a link, URL or QR code to a public page showing the original. Routine edits such as exposure, white balance, color correction, cropping and straightening are exempt. The law is codified as Business and Professions Code § 10140.8, and a second law, AB 2025, extends it to rentals from January 1, 2027.
+
+## What AB 723 requires
+
+Section 10140.8(a) sets two requirements for any advertisement or promotional material for the sale of real property that includes a digitally altered image:
+
+1. **A statement that the image has been altered**, "reasonably conspicuous and located on or adjacent to the image."
+2. **Access to the original**: a link, URL or QR code to a publicly accessible website that includes, and clearly identifies, the original, unaltered image. The statement has to say the unaltered images can be accessed there.
+
+If the ad is posted on a website the agent controls, such as a brokerage site or property website, the unaltered versions also have to be in the posting itself, or reachable through a link to a public page that has them.
+
+## What counts as "digitally altered"
+
+An image is digitally altered when it was "altered through the use of photo editing software or artificial intelligence to add, remove, or change elements in the image." The statute's list, which is "not limited to" these, covers:
+
+- fixtures, furniture and appliances, which includes virtual staging
+- flooring, walls and paint color
+- hardscape, landscape and the façade
+- floor plans
+- elements outside of, or visible from, the property: streetlights, utility poles, views through windows, neighboring properties
+
+**Not covered:** images where only lighting, sharpening, white balance, color correction, angle, straightening, cropping, exposure or other common adjustments were made that don't change the representation of the property.
+
+The test is whether something in the frame was added, removed or changed, not how dramatic the edit looks. A brightened, color-corrected living room needs no disclosure. A living room with a removed floor lamp does. [Which edits count](/blog/what-counts-as-material-alteration/) goes through the borderline cases.
+
+## Who it applies to
+
+Real estate brokers and salespersons, and any person acting on their behalf, which can include a photographer or editor working for them. The duty sits with the licensee who advertises, so in practice agents ask their photographers which photos were altered and how.
+
+## Where it applies
+
+Every "advertisement or other promotional material" for the sale of property: the MLS, portals, the brokerage website, social posts, flyers and mailers. On print, the QR code is the practical way to point to the original.
+
+MLS rules sit on top of the statute. CRMLS, for example, requires the original immediately before or after the altered photo and bans some edits outright, such as removing utility poles. See [California MLS photo requirements](/mls-photo-requirements/).
+
+## What changes on January 1, 2027 (AB 2025)
+
+AB 2025, signed September 27, 2026, amends § 10140.8 and adds a rental counterpart:
+
+- **Rentals are covered.** New Civil Code § 1940.11 applies the same disclosure-and-original rule to rental ads. It covers anyone advertising a rental, not only licensees, and it includes fully AI-generated images. See [California's rental listing photo law](/laws/california-rentals/).
+- **Long leases move to the rental rule.** New § 10140.8(c): the sales law no longer applies to advertising for a leasehold exceeding one year.
+- **Link wording.** § 10140.8(a)(1) now reads "a link, URL, or QR code to a publicly accessible internet website" with the original. The substance is unchanged.
+
+## Penalties
+
+The Legislative Counsel's digest for AB 2025 notes that "a willful violation of the Real Estate Law is a crime." We don't quote penalty amounts here, because the sources we checked disagreed on them.
+
+## Worked examples
+
+**Virtually staged bedroom on the MLS and a flyer.** The MLS caption reads *"Digitally altered image: virtually staged. The original, unaltered image can be accessed at [link]."* The flyer prints the same statement next to the photo, with a QR code to the same page. Both meet § 10140.8(a)(1).
+
+**Twilight conversion with only a color shift.** If the day-to-dusk edit only changed lighting and color, it falls under the (b)(2) exclusions. If it added glowing lights in empty windows or a sky that wasn't there, it changed elements, so disclose it.
+
+**"Virtually staged" caption, no link: fails.** The label names the alteration, but there's no link, URL or QR code to the original, so the statement is incomplete. Add the link and say the original can be accessed there.
+
+## Questions
+
+**Does AB 723 ban virtual staging?** No. It requires disclosure and access to the original. Bans on specific edits come from MLS rules.
+
+**Do I have to disclose color correction or HDR blending?** Not under AB 723, as long as nothing in the frame was added, removed or changed. Some MLSs differ: MLSListings asks for any enhancement, color included, to be noted in the public remarks.
+
+**Is a link in the listing description enough?** The statement has to be on or adjacent to the altered image. A link only in the general description, away from the photo, is unlikely to meet the "on or adjacent" requirement.
+
+**Does it apply to photos from before 2026?** The statute has no exception for older photos. It applies to advertising from January 1, 2026, whenever the photo was edited.
+
+The [disclosure generator](/tools/disclosure-generator/) writes the statement from the edits you tick. New York and Washington, DC have similar bills pending; see the [disclosure law tracker](/laws/).

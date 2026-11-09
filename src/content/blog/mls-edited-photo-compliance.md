@@ -12,7 +12,7 @@ You've probably noticed the uptick in agent emails lately: "What did you edit on
 
 Two years ago, this conversation barely happened. Today, it's unavoidable.
 
-The trigger is California's AB 723, which requires real estate professionals to flag digitally altered images in property advertising and to link to the unaltered originals. Other states are moving in the same direction. The rules vary by state and MLS, but the trend is consistent: edited photos must be labeled or documented; undisclosed edits can trigger compliance violations; and there's no defensible path forward if you can't prove what you did or didn't change.
+The trigger is California's AB 723, which requires real estate professionals to flag digitally altered images in property advertising and to link to the unaltered originals. California extended it to rentals from January 1, 2027, and New York and Washington, DC have similar bills pending (see the [disclosure law tracker](/laws/)). The rules vary by state and MLS, but the trend is consistent: edited photos must be labeled or documented; undisclosed edits can trigger compliance violations; and there's no defensible path forward if you can't prove what you did or didn't change.
 
 Here's where photographers get caught: your agent client is responsible for what goes into the MLS. If a photo is edited and not disclosed—or if the MLS later asks "what exactly changed here?"—the agent's broker has a compliance problem. The agent then turns to you with an urgent question you often can't answer cleanly because you edited 50 photos that shoot, and you didn't formally track which ones were altered and how.
 
@@ -24,7 +24,7 @@ Real estate photo disclosure rules are evolving state by state, and they're not 
 
 California's AB 723 requires a broker or salesperson — or anyone acting on their behalf, which includes you — to disclose digitally altered images in advertising and promotional material. The line it draws is narrower than people assume: removing a car from a driveway counts, while adjusting colour saturation, cropping, or lighting does not. The statute is also specific about the mechanics, contrary to a common reading: the statement must be reasonably conspicuous and placed on or adjacent to the image, and it must point the reader to a website, URL, or QR code where the unaltered originals can be seen. Individual MLS boards then layer their own field and labelling rules on top.
 
-Other states and regional MLSs are layering in similar rules or tightening existing guidance. Some MLSs require an explicit checkbox. Others require disclosure in the listing notes. A few are moving toward photo-authentication technologies, though those are still early. The common thread: if you edit a photo, the broker needs to know, document it, and potentially disclose it in or alongside the listing.
+MLSs add their own layer. Some require a specific label on the altered photo; MLSListings also wants enhancements noted in the public remarks; CRMLS bans some edits outright. The common thread: if you edit a photo, the broker needs to know, document it, and potentially disclose it in or alongside the listing.
 
 For photographers, this creates a practical problem: you need to know which photos you edited, what you changed, and be able to communicate that clearly to your agent clients so *they* can handle the MLS compliance piece correctly.
 

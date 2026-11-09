@@ -107,3 +107,12 @@ to surface "last AI prompt" per project. Keep entries append-only.
 > Built `/mls-photo-requirements/` hub + `crmls/`, `mlslistings/`, `bay-east/` pages, nav/footer
 > link, generator caveat (CRMLS now bans landscape/utility-pole edits). Photo specs dropped: no
 > primary source. Not committed, not deployed.
+
+## 2026-11-08 — v1.I–v1.K built (staging meaning, page retargets, law tracker)
+
+> "do 1 and 3, do 5 now - dont wait till bill passes … your job is to do your best in getting that DR
+> high by creating valuable pages, and linkable assets". Found that California AB 2025 (rentals) was
+> already signed 2026-09-27, effective 2027-01-01; read NY A11635 and DC B26-0858 from official text
+> (`docs/law-sources.md`; treg ~$0.09 + ~$0.002). PRD renumbered: v1.J retargets, v1.K law tracker,
+> conversion → v1.L, cadence → v1.M. Built `/virtually-staged-meaning/`, `/laws/` + 3 jurisdiction
+> pages, rewrote 2 posts, generator rental mode. Suite 37/37. Not committed.

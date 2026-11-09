@@ -1,41 +1,59 @@
 ---
-title: "Virtual Staging Disclosure Rules (2026)"
-h1: "Virtual Staging Disclosure Rules: What Real Estate Photographers Need to Know in 2026"
-description: "Virtual staging must be labelled on or next to the image. What the rules require in 2026, and where staging crosses into misrepresentation."
-keyword: "virtual staging disclosure rules"
+title: "Is Virtual Staging Legal? Disclosure Rules for 2026–2027"
+h1: "Is virtual staging legal? Disclosure rules for agents and photographers"
+description: "Virtual staging is legal, but California requires a label and a link to the original, rentals included from 2027, and MLS rules add more. What to do."
+keyword: "is virtual staging legal"
 ---
 
-You've probably noticed the shift. Your agent clients are asking more questions about which photos you've edited, what counts as "virtual staging," and how to prove they disclosed everything correctly. These aren't random inquiries—they're responses to tightening California photo-disclosure requirements and increasing MLS scrutiny. If you're handling listing edits and don't have a documented process for tracking what changed and why, you're sitting on compliance exposure that could affect both your reputation and your clients' licensing.
-## The Photo-Disclosure Landscape Has Changed
-California's real estate market operates under specific disclosure obligations. AB 723 set requirements for digitally altered images in property advertising — not for ordinary enhancement, which it expressly carves out — and the ripple effect is reshaping how agents and photographers document their work. What used to be a handshake agreement—"yeah, we edited these"—now needs a paper trail.
-The pressure is accelerating because multiple stakeholders are looking at the same problem simultaneously. MLSs are tightening photo submission standards. Brokers are auditing agent compliance. Consumers, thanks to widespread photo-editing literacy, are more skeptical of heavily altered images. And agents, rightfully, want to protect themselves with documented evidence of their disclosure practices.
-For photographers managing dozens of shoots per month, this creates a practical problem: How do you track changes, prove they were disclosed, and do it without building a custom system or hiring a compliance consultant?
-## Why Virtual Staging Disclosure Is Different
-Virtual staging—the digital addition of furniture, decor, or structural elements to a vacant or poorly furnished space—sits at the intersection of photography and disclosure. It's not a simple photo edit like brightness adjustment or color correction. It's a material change to the property appearance that buyers absolutely notice.
-Here's the distinction that matters:
-**Standard photo edits** (exposure balancing, color grading, cropping) are routine and generally assumed in real estate photography. Disclosure here is minimal because the image still authentically represents the property as it appears in person.
-**Virtual staging and major alterations** (adding furniture, removing structural elements, changing layout) are material representations that don't exist in the physical property. These require explicit disclosure because they fundamentally change how a buyer perceives the space. This is what AB 723 and MLS policies are targeting.
-The risk isn't theoretical. An agent who lists a virtually staged photo without clear disclosure can face NAR violations, MLS sanctions, broker liability, and consumer disputes. As the photographer, you're either part of the documentation chain or you're exposed to questions about what you knew and when.
-## Building a Defensible Documentation Workflow
-The solution doesn't require custom software or legal overhead. It requires a consistent, documented workflow that you can implement today.
-**Step 1: Categorize edits at delivery.** When you hand off photos to your agent client, explicitly label which images contain virtual staging, major structural changes, or other material alterations. A simple naming convention works: `01_living-room_VIRTUAL-STAGED.jpg` or a brief text line in your delivery notes. The goal is zero ambiguity.
-**Step 2: Document what changed and why.** You don't need a novel—a one-line note per image category is sufficient. "Added furniture rendering to empty living room" or "Color-corrected overexposed kitchen" tells the agent exactly what disclosure obligations apply. This becomes part of your delivery record.
-**Step 3: Create a shared audit trail.** Your delivery notes, file naming, and client communication become the audit trail. When an agent or broker later asks "what was edited in this photo?", you have a documented answer that matches what the client disclosed. This isn't just protection for you—it's protection for them, and agents recognize that immediately.
-**Step 4: Maintain consistency across edits.** Standardize your process so every shoot follows the same pattern. Consistency is what transforms a one-off practice into something defensible. It shows you take disclosure seriously, not that you scrambled to document something after the fact.
-## The Audit Trail That Protects Everyone
-Here's what this actually looks like in practice. You deliver a listing shoot to an agent with three virtually staged photos. Your notes clearly identify which ones, what was added, and why. The agent reviews the notes and understands exactly what needs disclosure in the listing description and MLS.
-If, six months later, a consumer questions whether the living room looked that furnished, or a broker audits the listing, there's a documented chain: photographer notes → agent disclosure → MLS record. Everyone involved can point to the same source material and explain exactly what happened.
-This protects you because it separates your work from the agent's disclosure obligation. You did your job transparently. It protects the agent because they have contemporaneous documentation of what they received and what they disclosed. It protects the broker because the audit trail is clear and defensible.
-Without this documentation? Everyone is guessing about what was edited, when, and whether it was disclosed. That's where disputes live.
-## Getting Ahead of Compliance
-The practical reality is that this documentation takes almost no additional time when built into your workflow. You're already editing photos. You're already communicating with agents. Adding a category label and a one-line note is a 30-second addition to your existing delivery process.
-What it does immediately:
-- **Stops vague agent questions.** Agents get clear guidance on what disclosure is required, reducing their compliance risk and their stress.
-- **Creates a defensible record for you.** If anyone ever asks what you knew about editing decisions, you have a documented answer that matches your actual work.
-- **Scales across your client base.** Once the process is routine for one agent, it's routine for all of them. You're not managing multiple ad-hoc systems.
-- **Positions you as the compliance partner.** Photographers who can confidently say "here's exactly what changed and here's the documentation" become the trusted choice for agents managing disclosure risk.
-The agents you work with are already worried about photo disclosure. Many are being asked directly by their brokers about virtual staging practices. When you deliver not just photos but documented changes, you're solving a real problem they have.
-## Make Documentation Your Standard
-California AB 723 and MLS photo standards aren't going away. If anything, the scrutiny will increase as consumer awareness grows. The photographers who will thrive are the ones who've already integrated disclosure documentation into their workflow—not as a compliance checkbox, but as a core part of how they deliver value to agents.
-Start by picking one of your next shoots. Label the virtual staging clearly. Write a one-line note. Deliver it with that documentation. See how your agent responds. Almost universally, they'll appreciate the clarity and the protection it provides.
-That's not extra work. That's the future standard of practice.
+Yes, virtual staging is legal. We know of no US law that bans it. Where rules exist, they require you to disclose it. In California, every virtually staged listing photo needs a statement on or next to it saying it was altered, plus a link, URL or QR code to the empty-room original: for sales since January 1, 2026 (AB 723), and for rentals from January 1, 2027 (AB 2025). MLS rules add their own labeling and placement requirements, and some ban edits that go beyond furniture.
+
+## Where the rules come from
+
+Three layers apply to a staged listing photo, and you have to satisfy all of them.
+
+1. **State law.** In force only in California so far. New York (A11635) and Washington, DC (B26-0858) have bills pending; the [disclosure law tracker](/laws/) has the current status.
+2. **MLS rules.** Private rules that bind MLS members. They can be stricter than the law, and in California several are; see [California MLS photo requirements](/mls-photo-requirements/).
+3. **General false-advertising rules.** A staged photo that misrepresents the property can be misleading even where no photo-specific rule exists.
+
+## What California requires
+
+For a home for sale, § 10140.8 requires:
+
+- a reasonably conspicuous statement, on or adjacent to the staged photo, that the image has been altered; and
+- a link, URL or QR code to a public page that includes and clearly identifies the original, with the statement saying the original can be accessed there.
+
+From January 1, 2027, Civil Code § 1940.11 applies the same idea to rental ads. It covers landlords and property managers, not just agents, and it reaches fully AI-generated images. Details: [California's rental listing photo law](/laws/california-rentals/).
+
+## Where staging stops and misrepresentation starts
+
+Virtual staging adds movable furniture and decor. The problems start when an edit changes the property itself: flooring, walls, paint color, cabinetry, landscape, the view through a window. California's law treats all of those as alterations that need disclosure. CRMLS goes further and prohibits them in listing photos unless the home will be improved to match by close, and it prohibits altering anything outside the property, such as utility poles or views, outright.
+
+The safe pattern: stage furniture, leave the building alone.
+
+## The disclosure, written out
+
+Per photo, on or next to the image:
+
+> Digitally altered image: virtually staged with furniture and decor. The original, unaltered image can be accessed at [link].
+
+On the MLS, add the board's label, for example "Virtually Staged" on CRMLS, and upload the empty-room original where the board requires it: immediately before or after on CRMLS, immediately after on Bay East. The [disclosure generator](/tools/disclosure-generator/) writes the statement from the edits you tick.
+
+## Worked examples
+
+**Staged empty condo, California, for sale.** Label each staged photo, link the originals, and put the empty-room photo right after each staged one in the MLS. That meets the statute and every California MLS rule we've reviewed.
+
+**Staged rental, California, posted in December 2026 and still running in January 2027.** From January 1 the rental law applies to the ad. Add the disclosure and the original before then rather than editing a live listing later.
+
+**Staging plus new hardwood floors over the carpet: fails on CRMLS.** The furniture is fine with disclosure; the flooring change is a real-property alteration, which CRMLS prohibits unless the floors will actually be installed before close. Re-stage on the real floor.
+
+## Questions
+
+**Do I have to disclose virtual staging outside California?** Not under a state law yet, as far as we found. Check your MLS, though: photo rules often require a label regardless of state law.
+
+**Is "virtually staged" in the photo caption enough?** In California, no. The statement also has to point to the original through a link, URL or QR code.
+
+**Can I put "Virtually Staged" as a watermark on the image?** A watermark can serve as the "on the image" statement, but it still needs the link to the original. Check your MLS: some ban text on photos except for describing property features.
+
+**Who is responsible, the photographer or the agent?** The duty sits with the licensee advertising the property and anyone acting on their behalf. Agents rely on photographers to tell them which images were altered and how, so deliver that record with the photos.
+
+**What do buyers see?** A labeled photo and a way to view the empty room; see [what "virtually staged" means](/virtually-staged-meaning/) for the buyer's side.

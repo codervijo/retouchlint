@@ -1,16 +1,32 @@
 import { useState } from "react";
-import { GEN_EDITS, generateDisclosure } from "@/lib/disclosure";
+import { GEN_EDITS, generateDisclosure, type ListingMode } from "@/lib/disclosure";
 
 export default function DisclosureGenerator() {
   const [selected, setSelected] = useState<string[]>([]);
   const [link, setLink] = useState("");
-  const result = generateDisclosure(selected, link);
+  const [mode, setMode] = useState<ListingMode>("sale");
+  const result = generateDisclosure(selected, link, mode);
 
   const toggle = (id: string) =>
     setSelected((s) => (s.includes(id) ? s.filter((x) => x !== id) : [...s, id]));
 
   return (
     <div className="not-prose my-8 rounded-xl border border-border bg-card p-6 text-base leading-normal">
+      <fieldset className="mb-6">
+        <legend className="font-medium text-foreground">Listing type</legend>
+        <div className="mt-2 flex flex-wrap gap-2 text-sm">
+          {([
+            ["sale", "For sale — AB 723 (§ 10140.8)"],
+            ["rental", "For rent — AB 2025 (Civ. Code § 1940.11, from Jan 1, 2027)"],
+          ] as [ListingMode, string][]).map(([m, label]) => (
+            <label key={m} className="flex items-center gap-2 rounded-md border border-border px-3 py-2 cursor-pointer hover:bg-secondary">
+              <input type="radio" name="listing-mode" checked={mode === m} onChange={() => setMode(m)} />
+              <span className="text-foreground">{label}</span>
+            </label>
+          ))}
+        </div>
+      </fieldset>
+
       <fieldset>
         <legend className="font-medium text-foreground">1. What was done to the photo?</legend>
         <div className="mt-3 grid sm:grid-cols-2 gap-2">
@@ -47,6 +63,16 @@ export default function DisclosureGenerator() {
           <p className="mt-2 rounded-md border border-success/30 bg-success/10 p-4 text-sm text-foreground">
             No AB 723 disclosure needed for these edits. Section 10140.8(b)(2) excludes lighting, sharpening, white balance, color correction, angle, straightening, cropping, and exposure adjustments that don't change how the property is represented. Your MLS may still have its own rules.
           </p>
+        )}
+        {result.kind === "generated" && (
+          <div className="mt-3 space-y-3">
+            <Output label="On or next to the image" text={result.caption} />
+            <p className="text-sm text-muted-foreground">
+              {result.mode === "rental"
+                ? "Civil Code § 1940.11 covers fully AI-generated images: the disclosure is required, but the original-image requirement does not apply to an image or rendering not created with a capture device."
+                : "§ 10140.8 is written around altered photos and has no specific rule for fully generated images. Label it anyway; a generated image presented as a photo can still be misleading advertising."}
+            </p>
+          </div>
         )}
         {result.kind === "required" && (
           <div className="mt-3 space-y-4">

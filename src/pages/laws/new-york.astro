@@ -1,0 +1,149 @@
+---
+// /laws/new-york/ — NY A11635 (proposed Real Property Law § 443-b). Status: in committee.
+// Source quotes: docs/law-sources.md § New York.
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+
+const path = "/laws/new-york/";
+const SOURCE = "https://nyassembly.gov/leg/?default_fld=&leg_video=&bn=A11635&term=2025&Summary=Y&Actions=Y&Text=Y&Memo=Y";
+const title = "New York Altered Listing Photo Bill A11635 Explained";
+const h1 = "New York's proposed law on altered and AI-generated listing photos (A11635)";
+const description =
+  "New York bill A11635 would require a disclosure on edited or AI-generated listing photos for sales and rentals, plus the original online. Status and text.";
+
+const faq = [
+  {
+    q: "Is A11635 law in New York?",
+    a: "No. As of the status check, it was introduced in the Assembly on July 29, 2026 and referred to the Housing Committee. No Senate companion bill is listed.",
+  },
+  {
+    q: "Would it apply to rentals?",
+    a: "Yes. It covers advertisements and promotional material \"for the sale or lease of real property\", and names property managers and property owners as well as brokers and sellers.",
+  },
+  {
+    q: "Does it cover AI-generated video?",
+    a: "Its \"AI-generated image\" definition includes \"a still-photo or video image created in whole or in part by generative artificial intelligence.\" The separate \"digitally altered image\" definition covers still photos only.",
+  },
+  {
+    q: "When would it take effect?",
+    a: "Sixty days after it becomes law, under section 2 of the bill.",
+  },
+];
+
+const schema = [
+  {
+    "@type": "Article",
+    headline: h1,
+    description,
+    mainEntityOfPage: `https://retouchlint.com${path}`,
+    author: { "@type": "Organization", name: "RetouchLint" },
+    publisher: { "@id": "https://retouchlint.com/#organization" },
+  },
+  {
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+
+const related = [
+  { url: "/laws/", anchor: "All listing photo disclosure laws and bills" },
+  { url: "/laws/washington-dc/", anchor: "Washington, DC's listing photo bill" },
+  { url: "/laws/california-rentals/", anchor: "California's rental listing photo law" },
+  { url: "/virtually-staged-meaning/", anchor: "What \"virtually staged\" means" },
+];
+---
+<ArticleLayout
+  title={title}
+  h1={h1}
+  description={description}
+  path={path}
+  related={related}
+  breadcrumbs={[
+    { name: "Home", url: "/" },
+    { name: "Disclosure laws", url: "/laws/" },
+    { name: "New York", url: path },
+  ]}
+  schema={schema}
+>
+  <p>
+    New York Assembly bill A11635 would require anyone advertising a home for sale or lease
+    with a digitally altered or AI-generated photo to put a statement on or next to each
+    altered image saying it has been altered. For ads posted online, it would also require
+    the unaltered version, or a link to it. It is a bill, not a law: it was introduced on
+    July 29, 2026 and sent to the Assembly Housing Committee. If passed, it takes effect 60
+    days later.
+  </p>
+
+  <h2>What the bill would require</h2>
+  <p>It would add a new section 443-b to the Real Property Law:</p>
+  <ul>
+    <li>
+      <strong>A statement</strong> "disclosing that the image has been altered,"
+      "conspicuously located on or adjacent to each altered image," in any advertisement or
+      promotional material for the sale or lease of real property.
+    </li>
+    <li>
+      <strong>The original, online.</strong> When the ad is posted on a website, the
+      unaltered versions of the images must be included in the posting. A link to the
+      original image also satisfies this.
+    </li>
+  </ul>
+
+  <h2>Who would be covered</h2>
+  <p>
+    The bill names "a real estate broker, seller, property owner or property manager." That
+    is broader than California's sales law, which covers only licensees and people acting
+    for them, and it reaches owners who list without an agent.
+  </p>
+
+  <h2>What counts</h2>
+  <ul>
+    <li>
+      <strong>Digitally altered image</strong>: a still photo altered with photo-editing
+      software or AI to add, remove or change elements of the property, "including, but not
+      limited to, furniture, appliances, flooring, and walls."
+    </li>
+    <li>
+      <strong>AI-generated image</strong>: a still photo or video "created in whole or in
+      part by generative artificial intelligence."
+    </li>
+    <li>
+      <strong>Not covered</strong>: lighting, sharpening, white balance, color correction,
+      angle, straightening, cropping, exposure, and other common adjustments "that do not
+      change the conditions of the real property."
+    </li>
+  </ul>
+
+  <h2>How it compares with California</h2>
+  <ul>
+    <li>Sales and leases from the start. California covered rentals only with a second law, AB 2025, from 2027.</li>
+    <li>Explicit coverage of AI-generated video. California's laws speak of images.</li>
+    <li>The link to the original is one option for website postings. California's sales law requires a link, URL or QR code in every ad, print included.</li>
+    <li>Its list of example elements is shorter, but "including, but not limited to" leaves it open.</li>
+  </ul>
+
+  <h2>If you list in New York</h2>
+  <p>
+    Nothing is required by this bill yet. Labeling staged and AI-edited photos and keeping
+    originals available costs little, and it is what the bill, California's laws and most
+    MLS rules converge on. The sponsor's memo argues that renters and buyers "deserve a
+    clear understanding of the current condition of the home or the property, not simply
+    its potential."
+  </p>
+
+  <h2>Questions</h2>
+  {faq.map((f) => (
+    <>
+      <h3>{f.q}</h3>
+      <p>{f.a}</p>
+    </>
+  ))}
+  <p class="text-sm">
+    Source: <a href={SOURCE}>New York Assembly, A11635 (2025–2026 term)</a>: summary,
+    actions, sponsor's memo and text. Bills change in committee; check the current text.
+    This is not legal advice.
+  </p>
+</ArticleLayout>

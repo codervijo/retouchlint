@@ -171,3 +171,12 @@ https://search.google.com/search-console directly.
   volume before investing further in statute-named targeting. With 0 clicks site-wide,
   v1.G (conversion; renumbered v1.J on 2026-11-08) has nothing to measure yet, and no analytics is installed
   (CHECK_080).
+
+## 2026-11-08 — Query-targeted pages + disclosure-law tracker (v1.H–v1.K)
+- **Status:** active
+- **Hypothesis:** The site's pages rank on page 3–9 for broad terms they can't win. Pages aimed at specific, low-competition queries with primary-source detail nobody else has — MLS rule texts, AB 2025 (rentals, effective 2027-01-01), the NY/DC bills, "virtually staged meaning" — will earn impressions at rankable positions, and the law tracker + rental-mode generator give other sites a reason to link.
+- **KPI:** 28d impressions site-wide; impressions + avg position for "virtually staged meaning" / "what does virtually staged mean", "ab 723", "ab 2025", MLS rule queries; impressions on `/laws/*`, `/mls-photo-requirements/*`, `/virtually-staged-meaning/`.
+- **Baseline:** 55 imp / 0 clicks / pos 29.9 (28d through 2026-11-07); ~20 imp/week latest. Target query volumes (DataForSEO, US): "virtually staged meaning" 70, "what does virtually staged mean" 70 (Sep 140 + 90), "ab 723" 90 avg (260 Dec–Jan peak), "ab 2025" 40 (ambiguous), "mls photo requirements" 40.
+- **Action:** v1.H MLS hub + CRMLS/MLSListings/Bay East pages (deployed 2026-11-08, `4438996`). v1.I `/virtually-staged-meaning/`. v1.J rewrote `/blog/california-real-estate-photo-disclosure/` (→ "AB 723 explained", incl. AB 2025) and `/blog/virtual-staging-disclosure-rules/` (→ "is virtual staging legal"). v1.K `/laws/` tracker + California rentals, New York, Washington DC pages; generator rental mode + AI-generated option.
+- **Result:** TBD — review 2026-12-06
+- **Learning:** TBD

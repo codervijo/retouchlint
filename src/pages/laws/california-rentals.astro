@@ -1,0 +1,190 @@
+---
+// /laws/california-rentals/ — AB 2025 → Civil Code § 1940.11 (rentals), effective 2027-01-01.
+// Source quotes: docs/law-sources.md § AB 2025.
+import ArticleLayout from "../../layouts/ArticleLayout.astro";
+
+const path = "/laws/california-rentals/";
+const SOURCE = "https://leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=202520260AB2025";
+const title = "California AB 2025: Altered Rental Listing Photos (2027)";
+const h1 = "California's rental listing photo law (AB 2025): what changes January 1, 2027";
+const description =
+  "From 2027, anyone advertising a California rental must label altered or AI-generated photos and show the original. Who's covered and what to post.";
+
+const faq = [
+  {
+    q: "When does AB 2025 take effect?",
+    a: "January 1, 2027. The Governor signed it on September 27, 2026 (Chapter 572, Statutes of 2026), and as a non-urgency statute it takes effect on the first of the following year.",
+  },
+  {
+    q: "Does it apply to landlords who aren't real estate agents?",
+    a: "The new Civil Code § 1940.11 applies to \"a person who includes a digitally altered image in an advertisement or other promotional material for rental of real property\" — not only to licensees. A licensee who violates it is also treated as violating their licensing law.",
+  },
+  {
+    q: "Do AI-generated apartment photos need a disclosure?",
+    a: "Yes. The rental law's definition of a digitally altered image includes an image \"fully generated through artificial intelligence software\". Such an image needs the disclosure, but because it wasn't taken with a capture device, the requirement to include an original doesn't apply.",
+  },
+  {
+    q: "What about leases longer than a year?",
+    a: "From 2027 they fall under the rental rule. AB 2025 adds a subsection to the sales law, § 10140.8, saying it no longer applies to advertising for a leasehold exceeding one year.",
+  },
+  {
+    q: "Is color correction or brightening covered?",
+    a: "No. Like the sales law, § 1940.11 excludes images where only lighting, sharpening, white balance, color correction, angle, straightening, cropping, exposure or similar adjustments were made that don't change the representation of the property.",
+  },
+];
+
+const schema = [
+  {
+    "@type": "Article",
+    headline: h1,
+    description,
+    mainEntityOfPage: `https://retouchlint.com${path}`,
+    author: { "@type": "Organization", name: "RetouchLint" },
+    publisher: { "@id": "https://retouchlint.com/#organization" },
+  },
+  {
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+
+const related = [
+  { url: "/laws/", anchor: "All listing photo disclosure laws and bills" },
+  { url: "/blog/california-real-estate-photo-disclosure/", anchor: "AB 723, the sales version" },
+  { url: "/virtually-staged-meaning/", anchor: "What \"virtually staged\" means for renters" },
+  { url: "/tools/disclosure-generator/", anchor: "Write the disclosure statement" },
+];
+---
+<ArticleLayout
+  title={title}
+  h1={h1}
+  description={description}
+  path={path}
+  related={related}
+  breadcrumbs={[
+    { name: "Home", url: "/" },
+    { name: "Disclosure laws", url: "/laws/" },
+    { name: "California rentals", url: path },
+  ]}
+  schema={schema}
+>
+  <p>
+    From January 1, 2027, anyone advertising a California rental with a digitally altered
+    or AI-generated photo must put a disclosure on or next to the image saying it has been
+    altered, and must include the original photo in the ad or link to it. That's AB 2025,
+    signed September 27, 2026, which adds Civil Code § 1940.11. It extends AB 723, which
+    only covered sales, and it applies to landlords and property managers, not just
+    real estate agents.
+  </p>
+
+  <h2>What § 1940.11 requires</h2>
+  <ol>
+    <li>
+      <strong>A disclosure that the image has been altered</strong>, "reasonably
+      conspicuous and located on or adjacent to the image."
+    </li>
+    <li>
+      <strong>The original.</strong> The ad must include the unaltered version of the
+      images in the posting, or a link, URL or QR code to a publicly accessible website
+      that includes and clearly identifies the original. If you use a link, the disclosure
+      has to say the unaltered images can be accessed through it.
+    </li>
+  </ol>
+
+  <h2>What counts as altered</h2>
+  <p>Two kinds of image are covered:</p>
+  <ul>
+    <li>
+      <strong>Edited photos</strong>: an existing image altered with editing software or
+      AI to add, remove or change elements. The list is the same as the sales law's:
+      fixtures, furniture, appliances, flooring, walls, paint color, hardscape, landscape,
+      façade, floor plans, and things outside or visible from the property such as
+      streetlights, utility poles, views through windows and neighboring properties.
+    </li>
+    <li>
+      <strong>Fully AI-generated images</strong>, made by or at the direction of a person.
+      This is new; the sales law has no equivalent. These still need the disclosure, but the
+      original-image requirement doesn't apply to an image, architectural rendering or
+      artistic rendering that wasn't originally created with a capture device.
+    </li>
+  </ul>
+  <p>
+    Excluded: images where only lighting, sharpening, white balance, color correction,
+    angle, straightening, cropping, exposure or other common adjustments were made that
+    don't change the representation of the property.
+  </p>
+
+  <h2>Who it applies to</h2>
+  <p>
+    The sales law, § 10140.8, binds real estate brokers and salespersons and people acting
+    for them. The rental law starts with "a person who includes a digitally altered image"
+    in a rental ad. On its face that covers owners advertising their own units, property
+    managers, and leasing staff. For licensees, a violation is also a violation of their
+    licensing law.
+  </p>
+
+  <h2>What AB 2025 changes in the sales law</h2>
+  <ul>
+    <li>
+      <strong>Long leases move.</strong> New § 10140.8(c): the sales law "does not apply to
+      an advertisement or other promotional material for a leasehold exceeding one year's
+      duration." Those ads now follow § 1940.11.
+    </li>
+    <li>
+      <strong>Wording of the link requirement.</strong> § 10140.8(a)(1) now reads "a link,
+      URL, or QR code to a publicly accessible internet website" that includes the
+      original, and the statement must say the originals "can be accessed via the link,
+      URL, or QR code."
+    </li>
+  </ul>
+
+  <h2>Worked examples</h2>
+  <h3>Apartment listing with a virtually staged living room</h3>
+  <p>
+    Caption on the staged photo: <em>"Virtually staged — furniture added digitally. The
+    unaltered photo is in this listing (photo 6)."</em> Then include the empty-room photo
+    in the same listing. If the platform limits photos, link to a public page with the
+    original instead and say so in the caption.
+  </p>
+  <h3>AI-generated "lifestyle" image of a unit that was never photographed that way</h3>
+  <p>
+    Label it as AI-generated or altered on or next to the image. No original is required,
+    because it wasn't made with a camera. A rendering of a unit under construction falls
+    in the same category.
+  </p>
+  <h3>Building's stock photo with a replaced window view: fails</h3>
+  <p>
+    Views through windows are on the list. Using an edited view without a disclosure and
+    the original breaks the rule, even when the same image has run for years. It is also the
+    pattern DC's bill sponsor singled out: stock photos of generic rooms that misrepresent
+    window views and unit size.
+  </p>
+
+  <h2>Before January 1, 2027</h2>
+  <ul>
+    <li>Audit active rental listings and evergreen building photos for edits beyond exposure and color.</li>
+    <li>Keep the unedited originals somewhere public and stable, so a link still works months later.</li>
+    <li>Add a disclosure line to every altered or AI-generated image, on or next to it, not only in the description.</li>
+    <li>For listings over one year, follow the rental rule, not AB 723.</li>
+  </ul>
+  <p>
+    The <a href="/tools/disclosure-generator/">disclosure generator</a> writes the
+    statement for edited photos.
+  </p>
+
+  <h2>Questions</h2>
+  {faq.map((f) => (
+    <>
+      <h3>{f.q}</h3>
+      <p>{f.a}</p>
+    </>
+  ))}
+  <p class="text-sm">
+    Source: <a href={SOURCE}>AB 2025 (Pellerin), Chapter 572, Statutes of 2026</a>, on
+    leginfo.legislature.ca.gov. This is not legal advice.
+  </p>
+</ArticleLayout>

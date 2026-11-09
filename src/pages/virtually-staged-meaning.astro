@@ -1,0 +1,154 @@
+---
+// /virtually-staged-meaning/ — v1.I, buyer/renter audience.
+// Targets "virtually staged meaning" / "what does virtually staged mean" (DataForSEO,
+// 2026-11-08). Law claims: docs/law-sources.md; MLS claims: docs/mls-sources.md.
+import ArticleLayout from "../layouts/ArticleLayout.astro";
+
+const path = "/virtually-staged-meaning/";
+const title = "What Does \"Virtually Staged\" Mean on a Listing?";
+const h1 = "What \"virtually staged\" means on a home or apartment listing";
+const description =
+  "A virtually staged photo has furniture added by software; the room is really empty. How to spot it, find the original, and what's not allowed.";
+
+const faq = [
+  {
+    q: "Does \"virtually staged\" mean the furniture comes with the home?",
+    a: "No. The furniture and decor were added to the photo by software or AI. Unless the listing says otherwise, the room is empty or furnished differently, and nothing in the staged photo is included in the sale or lease.",
+  },
+  {
+    q: "Is virtual staging legal?",
+    a: "Yes, it's legal, but it has to be disclosed where rules apply. In California, the law requires a statement on or next to an altered listing photo and access to the original, for sales since 2026 and for rentals from January 1, 2027. The California MLS rules we've reviewed also require a label and the original photo.",
+  },
+  {
+    q: "How do I see what the room really looks like?",
+    a: "Look for the original. In California the ad has to include it or link to it; MLSs such as CRMLS and Bay East require the unstaged photo next to the staged one. If you can't find it, ask the agent or landlord for the unedited photo, or a video walkthrough.",
+  },
+  {
+    q: "What's the difference between \"virtually staged\" and \"digitally altered\"?",
+    a: "Virtual staging is one kind of digital alteration: adding furniture and decor. \"Digitally altered\" is the broader label, covering removed objects, replaced skies, greener lawns, new flooring or paint, or changed views.",
+  },
+  {
+    q: "Can a listing change the walls or the view, not just the furniture?",
+    a: "That's where virtual staging becomes misrepresentation. Laws like California's treat changes to walls, flooring, landscape or views as alterations that must be disclosed, and some MLSs ban them outright. CRMLS, for example, prohibits altering real-property elements unless the work will be done by closing.",
+  },
+];
+
+const schema = [
+  {
+    "@type": "Article",
+    headline: h1,
+    description,
+    mainEntityOfPage: `https://retouchlint.com${path}`,
+    author: { "@type": "Organization", name: "RetouchLint" },
+    publisher: { "@id": "https://retouchlint.com/#organization" },
+  },
+  {
+    "@type": "FAQPage",
+    mainEntity: faq.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  },
+];
+
+const related = [
+  { url: "/blog/virtual-staging-disclosure-rules/", anchor: "Is virtual staging legal? Rules for agents" },
+  { url: "/laws/", anchor: "Listing photo disclosure laws by state" },
+  { url: "/laws/california-rentals/", anchor: "California's rental listing photo law" },
+  { url: "/mls-photo-requirements/", anchor: "How MLSs label altered photos" },
+];
+---
+<ArticleLayout
+  title={title}
+  h1={h1}
+  description={description}
+  path={path}
+  related={related}
+  breadcrumbs={[{ name: "Home", url: "/" }, { name: "Virtually staged meaning", url: path }]}
+  schema={schema}
+>
+  <p>
+    "Virtually staged" means the furniture and decor in the photo were added by software or
+    AI after the picture was taken. The room was empty, or furnished differently, when it
+    was photographed, and none of what you see comes with the home. Virtual staging is legal
+    and common for vacant homes and apartments. The label is there so you know the photo
+    shows a possibility, not the room as it is.
+  </p>
+
+  <h2>What virtual staging changes, and what it shouldn't</h2>
+  <p>
+    Honest virtual staging adds movable things: sofas, beds, rugs, art, plants, a dining
+    table. Its purpose is to show scale and how a room could be used. It shouldn't change
+    the building itself. Once an edit changes walls, flooring, cabinets, windows, the view
+    or the yard, it is no longer staging but a different property.
+  </p>
+  <p>
+    California's law draws that line in its definition of a "digitally altered image," which
+    lists fixtures, furniture, appliances, flooring, walls, paint color, hardscape,
+    landscape, façade, floor plans, and things outside the property such as utility poles,
+    views through windows and neighboring properties. Every one of those needs a disclosure.
+    Some MLSs go further: CRMLS bans altering real-property elements in listing photos
+    unless the home will be improved to match by closing, and bans altering anything
+    outside the property outright.
+  </p>
+
+  <h2>Labels you'll see</h2>
+  <ul>
+    <li><strong>"Virtually staged"</strong>: furniture and decor added.</li>
+    <li><strong>"Digitally altered" / "Photo modified"</strong>: something in the frame was added, removed or changed; it may be staging or something else.</li>
+    <li><strong>"AI altered" / "AI-generated"</strong>: made or changed with AI. Under California's rental law from 2027, a fully AI-generated image needs a label too.</li>
+    <li><strong>"Rendering"</strong>: an illustration of how the property will or could look, often for new construction.</li>
+  </ul>
+
+  <h2>How to tell if a photo is virtually staged</h2>
+  <ul>
+    <li>Look for the unstaged twin. Some MLSs, such as CRMLS and Bay East in California, require the original next to the staged photo, so the same room appears twice, empty and furnished.</li>
+    <li>Check the caption and the description for "virtually staged" or "digitally altered."</li>
+    <li>Compare with the video tour or floor plan. Staged furniture can make a small room look bigger with undersized pieces.</li>
+    <li>Watch for physics: shadows going the wrong way, no reflections in glossy floors, rugs that float.</li>
+  </ul>
+
+  <h2>Your right to see the original (California)</h2>
+  <p>
+    For homes for sale, California's AB 723 has required since January 1, 2026 that an ad
+    with an altered photo include a statement saying so, plus a link, URL or QR code to a
+    public page with the original. From January 1, 2027, AB 2025 extends this to rentals,
+    for anyone advertising a rental, not just agents. If an altered listing gives you no way
+    to see the original, ask for it.
+  </p>
+  <p>
+    Outside California, New York and Washington, DC have similar bills pending; the
+    <a href="/laws/">disclosure law tracker</a> has the status.
+  </p>
+
+  <h2>Three listings</h2>
+  <h3>Staged living room with the empty original next to it</h3>
+  <p>
+    This is how it should look. The staged photo is labeled, the empty room is the next
+    photo, and you can judge the space yourself.
+  </p>
+  <h3>"Virtually staged" label, but the floors look different in the empty photo</h3>
+  <p>
+    That's more than staging: the flooring was changed. Ask which photo is accurate. In
+    California this is an alteration that has to be disclosed for what it is.
+  </p>
+  <h3>Furnished apartment photo with a skyline view, no label</h3>
+  <p>
+    Possibly a stock photo of a different unit, or a replaced view. Ask for an unedited
+    photo of the actual unit and the actual window. DC's bill sponsor named exactly this
+    pattern, stock photos that misrepresent window views and unit size.
+  </p>
+
+  <h2>Questions</h2>
+  {faq.map((f) => (
+    <>
+      <h3>{f.q}</h3>
+      <p>{f.a}</p>
+    </>
+  ))}
+  <p class="text-sm">
+    Agents and photographers: the <a href="/tools/disclosure-generator/">disclosure
+    generator</a> writes the statement California requires.
+  </p>
+</ArticleLayout>
