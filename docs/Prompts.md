@@ -64,3 +64,11 @@ to surface "last AI prompt" per project. Keep entries append-only.
 > "do the growth reviews" — pulled GSC query/page data (through 2026-11-06) and filled
 > Result/Learning in `docs/growth.md`. Indexing met (10/10); 55 imp / 0 clicks / pos 29.9
 > (28d); no statute-specific query traction. Both entries extended to 2026-12-06.
+
+## 2026-11-08 — 10x impressions plan (v1.G–v1.K renumber)
+
+> "how do we expand impressions 10x? use tregs and data to make the plan" — keyword volume,
+> SERPs and backlinks via treg ($0.16). Finding: the niche is ~520 US searches/mo; DA 3 is the
+> first gap. Operator chose option A, all three phases: v1.G backlinks, v1.H MLS photo
+> requirements hub, v1.I virtual-staging legality + edit types; conversion → v1.J, content
+> cadence → v1.K. PRD updated; no code.

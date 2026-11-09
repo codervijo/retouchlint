@@ -4,7 +4,7 @@ prd_version: 2
 project_version: v1.F
 status: active
 owner: Vijo
-last_updated: 2026-09-30
+last_updated: 2026-11-08
 ---
 
 # retouchlint.com — PRD
@@ -75,8 +75,23 @@ Two-level versioning convention (canonical: `sites/portfolio/AI_AGENTS.md`):
 | **v1.D** | indexing baseline | GSC property `sc-domain:retouchlint.com` verified via DNS TXT; `sitemap-index.xml` submitted; first GSC numbers recorded in `docs/growth.md` | ✅ 2026-09-30 (12 imp / 0 clicks / pos 6.0, 28d) |
 | **v1.E** | SEO basics + AB 723 positioning | app routes (`/dashboard/`, `/projects/*`, `/share/`) `noindex` + out of sitemap; 1200×630 OG image + `summary_large_image`; homepage retargeted to "AB 723 listing photo disclosure" (names AB 723, § 10140.8, CRMLS Rule 11.5.2, California) with server-rendered law section + FAQPage schema; "Powered by RetouchLint" link on the public original-photo page; mock-UI domain → `.com`, Brokerage CTA → real contact; free no-login `/tools/disclosure-generator/` ending in a packet CTA | ✅ shipped 2026-09-30 (`ba35da9`…`e1ccb85`, pushed `c040d96`) |
 | **v1.F** | claims accuracy | packet `disclosureText()` rewritten to § 10140.8(a)(1) shape (altered + where originals can be accessed) with a per-packet `originalsUrl`; exempt-only edits cite (b)(2); in-app labels match reality ("Download disclosure text (.txt)", originals "stored in this browser", share page "opens only here"); landing Features / badge bar / workflow copy drop permanent-link, PDF, C2PA, NAR claims. Pricing tier lists untouched (billing out of scope) | ✅ shipped 2026-09-30 |
-| **v1.G** | conversion path | route content readers into the packet workflow (in-content CTA → `projects/new`); measure content → packet-start rate | planned |
-| **v1.H** | content cadence | execute `content-draft/blog-calendar.md` (12 posts, monthly) against whichever v1.B pages actually earn impressions | planned |
+| **v1.G** | authority (backlinks) | operator-run link outreach: photographer communities, MLS vendor/resource directories, California Realtor associations and MLSs already publishing AB 723 guidance (e.g. SDMLS, PFAR); the free `/tools/disclosure-generator/` is the linkable asset. Claude prepares the target list, pitch copy, and per-target landing URL. KPI: Moz DA above 3 (baseline DA 3, 13 referring domains / 6 nofollow, 2026-11-08) and existing content pages reaching page 1 | planned |
+| **v1.H** | MLS photo requirements hub | one hub page covering MLS photo specs (size, aspect ratio) + alteration/disclosure rules, plus per-MLS pages (§ 7 pSEO: CRMLS, SDMLS, …), each citing that MLS's own rules document and passing a v1.C-style primary-source check before indexing. Folds in the v1.K content-cadence slot for this topic | planned |
+| **v1.I** | virtual-staging legality + edit types | "is virtual staging legal" page + § 7 per-edit-type pages ("Is [sky replacement / virtual staging / …] allowed under AB 723?"); per-state pages only after measuring each state variant's volume, each with its own statute check | planned |
+| **v1.J** | conversion path | route content readers into the packet workflow (in-content CTA → `projects/new`); measure content → packet-start rate. Moved behind v1.G–v1.I (2026-11-08): 0 clicks site-wide, nothing to convert yet | planned |
+| **v1.K** | content cadence | execute `content-draft/blog-calendar.md` (12 posts, monthly) against whichever pages actually earn impressions; re-scope against v1.H–v1.I output before starting | planned |
+
+**v1.G–v1.I rationale (2026-11-08, operator chose option A):** 10x impressions (55 → ~550 / 28d)
+needs page-1 rankings across nearly the whole measurable niche. US Google Ads volume
+(DataForSEO via treg, 2026-11-08): AB 723 terms ~140/mo averaged (40/mo now; peaked 260/mo
+Dec 2025–Jan 2026 around the effective date); MLS photo spec terms ~290/mo ("mls photos" 140,
+"mls photo size requirements" 70, "mls photo requirements" 40, KD 0–22); disclosure / legality
+long-tail ~90/mo. Head terms ("virtual staging" 4,400, "real estate photo editing" 590) are
+vendor product SERPs, KD 23–37, off-ICP — not targeted. Ads volumes are bucketed and miss the
+long tail (76% of GSC impressions are anonymized queries), so these are floors. The "ab 723"
+top 10 includes a LinkedIn post, an unrelated Facebook page and YouTube Shorts while
+retouchlint ranks 94 → authority, not content, is the first gap. Review in 28-day windows;
+first check 2026-12-06 (`docs/growth.md`).
 
 **Current state note:** all 15 routes are in `sitemap-index.xml` and no page
 carries a `robots` meta tag. The statutory claims were checked against the
@@ -105,7 +120,8 @@ HTML points into it. v1.E adds a server-rendered law section to the homepage tha
   earlier than traffic would otherwise justify.
 - **2026-09-16 — Content-to-product distance.** The content targets
   photographers researching *rules*; the product asks them to do per-listing
-  data entry. Unknown whether that gap converts, which is what v1.G measures.
+  data entry. Unknown whether that gap converts, which is what v1.G measures
+  (renumbered v1.J on 2026-11-08).
 - **2026-09-18 — RESOLVED (v1.C).** All corrections below were applied and the
   pages are indexable. Original finding retained because it is the reason to
   distrust the next batch of generated content.
@@ -169,7 +185,7 @@ HTML points into it. v1.E adds a server-rendered law section to the homepage tha
   6. *Uncommitted local state, deliberately left out of every commit* —
      `lamill.toml` (mode 600 tooling state), the `.lamill-translation-pending`
      deletion, and `content-draft/` (stale duplicate of `src/content/`, but
-     `content-draft/blog-calendar.md` is still the input for v1.H). Operator to
+     `content-draft/blog-calendar.md` is still the input for v1.H, now v1.K). Operator to
      decide whether to commit, gitignore, or delete.
   7. *lamill `submit-sitemap` fallback bug* — logged as BUG-092 in
      `sites/portfolio/docs/bugs.md`; until fixed, pass `--url
@@ -178,7 +194,8 @@ HTML points into it. v1.E adds a server-rendered law section to the homepage tha
 ## 7. SEO Roadmap
 
 Future work, queued after v1.E. **Not scheduled into phases yet — do not build
-until the operator slots an item.** Any page stating a statute, MLS rule, or
+until the operator slots an item.** Slotted 2026-11-08: pSEO per MLS → v1.H; pSEO per
+edit type → v1.I; Backlinks → v1.G. The rest stays unscheduled. Any page stating a statute, MLS rule, or
 penalty needs the v1.C-style check against the primary source before it is
 indexable.
 

@@ -169,5 +169,5 @@ https://search.google.com/search-console directly.
   homepage until ~2026-11-03, or (b) "AB 723" / "10140.8" queries have little search
   volume (not checked with a keyword tool). Extended to 2026-12-06; check keyword
   volume before investing further in statute-named targeting. With 0 clicks site-wide,
-  v1.G (conversion) has nothing to measure yet, and no analytics is installed
+  v1.G (conversion; renumbered v1.J on 2026-11-08) has nothing to measure yet, and no analytics is installed
   (CHECK_080).
