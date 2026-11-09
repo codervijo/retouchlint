@@ -72,3 +72,18 @@ to surface "last AI prompt" per project. Keep entries append-only.
 > first gap. Operator chose option A, all three phases: v1.G backlinks, v1.H MLS photo
 > requirements hub, v1.I virtual-staging legality + edit types; conversion → v1.J, content
 > cadence → v1.K. PRD updated; no code.
+
+## 2026-11-08 — v1.G started (backlinks)
+
+> "commit the docs and start v1.G" — committed `74b65d6`. Found link targets via treg SERP
+> + DataForSEO (~$0.03): 6 California MLS/association AB 723 pages, 4 photographer pages,
+> r/RealEstatePhotography. Current 29 referring domains are all spam. Wrote
+> `docs/outreach.md` (targets, honest-claims guardrail, 2 pitch templates, tracker).
+> Operator sends; contact addresses not yet looked up.
+
+## 2026-11-08 — virtual staging keyword data, v1.I narrowed
+
+> "with tregs, find some data around virtualstaging and related keywords" — 125 keywords via
+> DataForSEO ($0.09). Legality/disclosure terms ≤10/mo or unreported; state variants all
+> unreported; head terms are vendor SERPs and declining. "yes, update v1.I in the PRD" — v1.I
+> is now one consolidated legality/meaning page + per-edit-type pages; per-state pages dropped.
