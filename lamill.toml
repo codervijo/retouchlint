@@ -53,4 +53,4 @@ icp = "The first ICP is a real estate photographer or small media company servin
 urgency_trigger = "new or confusing state/MLS photo-disclosure rules and immediate agent inquiries about edited photos"
 penalty = "disclosure mistakes and no defensible audit trail, exposing photographers and agents to compliance problems and disputes"
 tone = "practical, workflow-first, trust-building"
-law = ""                  # statute or regulation if applicable, else empty
+law = "California AB 723"  # statute or regulation if applicable, else empty
